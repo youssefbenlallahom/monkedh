@@ -1,0 +1,755 @@
+{
+  "content_chunks": [
+    {
+      "id": "RT1",
+      "rt_number": 1,
+      "title": "La protection",
+      "category": "sécurité",
+      "situation": "La victime est exposée à un danger",
+      "objectives": ["Supprimer ou écarter un danger", "Réaliser un dégagement d'urgence", "Identifier les signaux d'alerte"],
+      "key_concepts": ["Niveaux de danger", "Dégagement d'urgence", "Balisage", "Sur-accident"],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Reconnaître les dangers",
+          "details": "Approche prudente, évaluation à distance, se renseigner auprès des témoins"
+        },
+        {
+          "step": 2,
+          "action": "Protéger",
+          "details": "Supprimer le danger si possible, délimiter la zone, utiliser tous moyens disponibles"
+        },
+        {
+          "step": 3,
+          "action": "Dégager d'urgence la victime",
+          "details": "Déplacement par traction (poignets ou chevilles) si danger vital irréversible. Technique exceptionnelle."
+        },
+        {
+          "step": 4,
+          "action": "Si dégagement impossible",
+          "details": "Alerter secours spécialisés, surveiller la zone, empêcher l'accès"
+        }
+      ],
+      "special_cases": [
+        {
+          "case": "Accident de la route",
+          "actions": [
+            "Feux de détresse, parking sécurisé",
+            "Descendre occupants derrière glissières",
+            "Balisage à 150-200m (triangle, lampe, linge blanc)",
+            "Couper contact, pas de fumée, extincteur si feu"
+          ]
+        },
+        {
+          "case": "Local enfumé",
+          "actions": ["Retenir respiration (<30s)", "Protection maximum vêtements/visage"]
+        },
+        {
+          "case": "Risque explosion (gaz)",
+          "actions": ["Pas d'étincelles (interrupteurs, lampe)"]
+        },
+        {
+          "case": "Danger électrique",
+          "actions": ["Couper le courant avant contact"]
+        }
+      ],
+      "techniques": [
+        {
+          "name": "Dégagement par traction",
+          "description": "Saisir fermement poignets ou chevilles, tirer sur sol jusqu'à lieu sûr",
+          "priority": "Rapidité sur sécurité",
+          "risk": "Peut aggraver traumatisme"
+        }
+      ],
+      "precautions": [
+        "Le sauveteur se protège en priorité",
+        "Victime visible et facilement accessible",
+        "Anticiper le chemin le plus sûr",
+        "Déplacement vers endroit suffisamment éloigné"
+      ],
+      "keywords": ["danger", "protection", "dégagement", "balisage", "sécurité", "sur-accident", "témoin"]
+    },
+    {
+      "id": "RT2",
+      "rt_number": 2,
+      "title": "L'alerte",
+      "category": "communication",
+      "situation": "Le sauveteur est confronté à une situation nécessitant le recours à un service d'urgence",
+      "objectives": ["Transmettre rapidement et précisément les informations nécessaires au service d'urgence adapté"],
+      "key_concepts": ["Chaîne de secours", "Numéros d'urgence", "Message d'alerte", "Dialogue médical"],
+      "emergency_numbers": [
+        {"number": "190", "service": "SAMU", "use": "Problème urgent de santé (secours médicalisé)"},
+        {"number": "198", "service": "Protection Civile", "use": "Problème de secours"},
+        {"number": "197/193", "service": "Police/Garde Nationale", "use": "Problème de sécurité ou ordre public"}
+      ],
+      "message_structure": {
+        "required_info": [
+          "NATURE DU PROBLÈME (malade ou accident)",
+          "RISQUES éventuels (incendie, explosion, produits chimiques)",
+          "LOCALISATION très précise",
+          "NOMBRE de personnes concernées",
+          "NUMÉRO DE TÉLÉPHONE d'où vous appelez",
+          "Votre nom si nécessaire",
+          "GRAVITÉ de l'état des victimes",
+          "PREMIÈRES MESURES PRISES ET GESTES EFFECTUÉS"
+        ],
+        "dialogue": "Dialogue possible avec médecin pour conseils/instructions"
+      },
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Décider d'alerter",
+          "details": "Toute situation à risques ou vie en danger, après évaluation rapide"
+        },
+        {
+          "step": 2,
+          "action": "Se munir d'un moyen de communication",
+          "details": "Téléphone fixe/mobile, cabine, borne d'appel, ou tierce personne"
+        },
+        {
+          "step": 3,
+          "action": "Choisir le service adapté",
+          "details": "190 (SAMU), 198 (Protection Civile), 197/193 (Police)"
+        },
+        {
+          "step": 4,
+          "action": "Transmettre les informations",
+          "details": "Message structuré et précis, attendre instructions avant de raccrocher"
+        }
+      ],
+      "keywords": ["alerte", "190", "SAMU", "198", "197", "193", "chaîne de secours", "message", "témoin"]
+    },
+    {
+      "id": "RT3",
+      "rt_number": 3,
+      "title": "La victime s'étouffe",
+      "category": "obstruction",
+      "situation": "La respiration spontanée de la victime consciente est brutalement et complètement empêchée (obstruction totale des voies aériennes)",
+      "objectives": ["Identifier l'obstruction", "Réaliser la séquence de désobstruction", "Gérer les cas particuliers (nourrisson, enfant, obstruction partielle)"],
+      "key_concepts": ["Obstruction totale", "Obstruction partielle", "Claques dans le dos", "Compressions abdominales (Heimlich)", "Compressions thoraciques (nourrisson)"],
+      "recognition_signs": [
+        "Victime en train de manger ou enfant jouant avec objet",
+        "Efforts pour respirer sans air qui entre/sort",
+        "Main à la gorge (signe universel)",
+        "Impossibilité de parler",
+        "Bouche ouverte",
+        "Impossibilité de tousser"
+      ],
+      "procedure_adult_child": [
+        {
+          "step": 1,
+          "action": "Maintenir la position de la victime (debout ou assise)"
+        },
+        {
+          "step": 2,
+          "action": "Constater l'obstruction totale"
+        },
+        {
+          "step": 3,
+          "action": "Donner 5 claques vigoureuses dans le dos",
+          "technique": "Victime penchée en avant, claques entre omoplates avec plat de la main"
+        },
+        {
+          "step": 4,
+          "action": "Si inefficace, 5 compressions abdominales (Heimlich)",
+          "technique": "Poing au creux de l'estomac (au-dessus nombril, sous sternum), pression arrière-haut"
+        },
+        {
+          "step": 5,
+          "action": "Répéter séquence claques/compressions jusqu'à désobstruction ou perte de connaissance"
+        }
+      ],
+      "procedure_infant": [
+        {
+          "step": 1,
+          "action": "5 claques dans le dos",
+          "position": "Nourrisson tête basse sur avant-bras, tête maintenue"
+        },
+        {
+          "step": 2,
+          "action": "5 compressions thoraciques",
+          "position": "Retourner sur dos, 2 doigts sur moitié inférieure sternum",
+          "frequency": "Alterner claques/compressions"
+        },
+        {
+          "step": 3,
+          "action": "Vérifier bouche, retirer corps étranger visible"
+        }
+      ],
+      "efficacy_criteria": ["Expulsion du corps étranger", "Apparition de toux", "Reprise de respiration"],
+      "special_cases": [
+        {
+          "case": "Obstruction partielle",
+          "conduite": "Laisser victime dans position confortable, ne PAS réaliser manœuvres de désobstruction, appeler 190"
+        },
+        {
+          "case": "Perte de connaissance",
+          "conduite": "Commencer RCP immédiatement (RT6)"
+        }
+      ],
+      "precautions": [
+        "Ne jamais retirer corps étranger non visible",
+        "Pas de compressions abdominales chez nourrisson (risque lésions organes)",
+        "Alterner claques/compressions rapidement"
+      ],
+      "keywords": ["étouffement", "obstruction", "claques dos", "Heimlich", "corps étranger", "nourrisson", "enfant", "adulte"]
+    },
+    {
+      "id": "RT4",
+      "rt_number": 4,
+      "title": "La victime saigne abondamment",
+      "category": "hémorragie",
+      "situation": "La victime présente un saignement abondant visible à l'œil nu",
+      "objectives": ["Arrêter l'hémorragie par compression directe, point de compression ou garrot", "Gérer les hémorragies spécifiques (nez, vomissement de sang)"],
+      "key_concepts": ["Hémorragie", "Compression directe", "Point de compression", "Garrot", "Tampon relais", "Prévention tétanos"],
+      "recognition_signs": [
+        "Perte de sang par plaie ou orifice",
+        "Saignement qui imbibe mouchoir en quelques secondes",
+        "Ne s'arrête pas spontanément"
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Constater l'hémorragie",
+          "details": "Vérifier sous vêtements, position de la victime"
+        },
+        {
+          "step": 2,
+          "action": "Arrêter l'hémorragie",
+          "priority_order": [
+            "Compression directe (doigts/paume sur plaie)",
+            "Tampon relais si besoin de se libérer",
+            "Point de compression si directe impossible/inefficace",
+            "Garrot en dernier recours"
+          ]
+        },
+        {
+          "step": 3,
+          "action": "Allonger victime horizontale",
+          "justification": "Retarde détresse par perte de sang"
+        },
+        {
+          "step": 4,
+          "action": "Faire alerter ou alerter"
+        },
+        {
+          "step": 5,
+          "action": "Vérifier arrêt du saignement, parler à la victime",
+          "restrictions": "Ne pas donner à boire, protéger du froid"
+        }
+      ],
+      "compression_techniques": [
+        {
+          "name": "Compression directe",
+          "description": "Pression avec doigts ou paume sur plaie",
+          "duration": "Jusqu'à arrivée secours"
+        },
+        {
+          "name": "Tampon relais",
+          "description": "Tissu propre maintenu par lien large (2 tours minimum)",
+          "conditions": "Substitution rapide de la compression manuelle"
+        },
+        {
+          "name": "Point de compression membre inférieur",
+          "location": "Pli de l'aine",
+          "technique": "Poing bras tendu à la verticale, pression continue"
+        },
+        {
+          "name": "Point de compression membre supérieur",
+          "location": "Face interne bras",
+          "technique": "Pouche appuyé vers l'os avec rotation perpendiculaire"
+        },
+        {
+          "name": "Point de compression cou",
+          "location": "Base du cou",
+          "technique": "Pouce appuyé vers vertèbres cervicales sans écraser trachée"
+        }
+      ],
+      "tourniquet_rules": {
+        "material": "Lien large (cravate, écharpe), JAMAIS ficelle/fil fer",
+        "placement": "Cuisse ou bras, entre plaie et aine/aisselle",
+        "visibility": "Toujours visible, ne pas recouvrir",
+        "timing": "Noter heure de pose (0-23h, minutes) visiblement sur victime",
+        "removal": "NE JAMAIS DESSERRER - Seul médecin autorisé"
+      },
+      "special_cases": [
+        {
+          "case": "Saignement de nez",
+          "conduite": [
+            "Victime assise, tête penchée EN AVANT (ne pas allonger)",
+            "Compresser narine qui saigne 10 minutes max",
+            "Si persiste ou récidive : avis médical"
+          ]
+        },
+        {
+          "case": "Vomissement/crachement de sang",
+          "conduite": [
+            "Alerter immédiatement médecin/secours (symptôme grave)",
+            "Position assise/demi-assise si gêne respiratoire",
+            "Conserver vomissements pour médecin",
+            "Surveiller conscience"
+          ]
+        }
+      ],
+      "hygiene_safety": [
+        "Port de gants ou protection plastique",
+        "Se laver/désinfecter mains immédiatement après (eau de Javel, Dakin)",
+        "Pas contact sang sur peau lésée",
+        "Eviter port mains à bouche/nez/yeux avant lavage"
+      ],
+      "keywords": ["hémorragie", "saignement", "compression", "point compression", "garrot", "tétanos", "tampon relais", "nez", "vomissement sang"]
+    },
+    {
+      "id": "RT5",
+      "rt_number": 5,
+      "title": "La victime est inconsciente",
+      "category": "conscience",
+      "situation": "La victime ne répond pas, ne réagit pas, et respire",
+      "objectives": ["Maintenir liberté des voies aériennes", "Placer en Position Latérale de Sécurité (PLS)"],
+      "key_concepts": ["Inconscience", "LVA (Liberté Voies Aériennes)", "PLS", "Obstruction par langue", "Surveillance respiration"],
+      "definition": "Victime ne parle pas, immobile, respire. Causes : traumatiques, médicales, toxiques",
+      "risks": [
+        "Langue qui tombe en arrière (obstruction)",
+        "Écoulement liquides gorge vers poumons",
+        "Évolution vers arrêt respiratoire/circulatoire"
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Protection",
+          "priority": "Préalable obligatoire"
+        },
+        {
+          "step": 2,
+          "action": "Rechercher détresse évidente",
+          "details": "Vérifier saignements importants"
+        },
+        {
+          "step": 3,
+          "action": "Apprécier état de conscience",
+          "technique": "Question simple ('Comment ça va?'), demander 'Serrez-moi la main'",
+          "duration": "Maximum 10 secondes"
+        },
+        {
+          "step": 4,
+          "action": "Si seul, appeler 'À l'aide'"
+        },
+        {
+          "step": 5,
+          "action": "Liberté immédiate des voies aériennes",
+          "details": [
+            "Desserrer vêtements serrés",
+            "Bascule tête en arrière + élévation menton (attention partie osseuse)",
+            "Ouvrir bouche, retirer corps étrangers visibles (prothèses décrochées)"
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Apprécier respiration",
+          "technique": "Oreille+joue sur bouche/nez, regarder thorax, écouter bruits",
+          "duration": "Maximum 10 secondes"
+        },
+        {
+          "step": 7,
+          "action": "Placer en PLS",
+          "priority": "Danger détresse respiratoire prime sur lésion rachidienne potentielle"
+        },
+        {
+          "step": 8,
+          "action": "Alerter secours médicalisés",
+          "timing": "Meilleur moment = après reconnaissance inconscience + respiration"
+        },
+        {
+          "step": 9,
+          "action": "Surveiller respiration",
+          "frequency": "Toutes les minutes",
+          "actions": "Regarder thorax, écouter, sentir avec main"
+        }
+      ],
+      "pls_technique": {
+        "preparation": [
+          "Retirer lunettes",
+          "Allonger membres inférieurs côte à côte",
+          "Placer bras le plus proche à angle droit, paume vers haut",
+          "Placer dos main contre oreille (côté sauveteur)",
+          "Saisir jambe opposée derrière genou"
+        ],
+        "turning": [
+          "Tirer jambe pour faire rouler victime vers soi",
+          "Mouvement unique sans brusquerie",
+          "Maintenir tête par rapport au cou",
+          "Coincer genou si besoin, terminer rotation épaule"
+        ],
+        "final_position": [
+          "Jambe du dessus à angle drois (hanche/genou)",
+          "Ouvrir bouche avec pouce-index sans mobiliser tête",
+          "Position stable, latérale maximale, surveillance possible"
+        ]
+      },
+      "special_cases": [
+        {
+          "case": "Nourrisson/enfant",
+          "conduite": "Identique à adulte"
+        },
+        {
+          "case": "Femme enceinte",
+          "conduite": "PLS gauche systématique (éviter compression vaisseaux abdominaux)"
+        },
+        {
+          "case": "Traumatisé (thorax, membre)",
+          "conduite": "Coucher sur côté atteint si possible"
+        },
+        {
+          "case": "Victime sur le ventre",
+          "conduite": "Compléter LVA, stabiliser, surveiller respiration"
+        }
+      ],
+      "keywords": ["inconscience", "PLS", "liberté voies aériennes", "respiration", "surveillance", "position latérale sécurité"]
+    },
+    {
+      "id": "RT6",
+      "rt_number": 6,
+      "title": "La victime ne respire plus (RCP)",
+      "category": "réanimation",
+      "situation": "Victime inconsciente, ne présente plus de mouvements respiratoires",
+      "objectives": ["Mettre en œuvre réanimation cardiopulmonaire de base", "Assurer ventilation artificielle et compressions thoraciques"],
+      "key_concepts": ["RCP", "Arrêt respiratoire", "ACR", "Compressions thoraciques", "Insufflations", "Pouls carotidien"],
+      "causes": [
+        "Évolution obstruction VA non résolue",
+        "Intoxication",
+        "Traumatisme, noyade, électricité",
+        "Maladie (infarctus)"
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Protection"
+        },
+        {
+          "step": 2,
+          "action": "Apprécier conscience",
+          "details": "Cf. RT5"
+        },
+        {
+          "step": 3,
+          "action": "Appeler 'À l'aide' si seul"
+        },
+        {
+          "step": 4,
+          "action": "Liberté immédiate des voies aériennes",
+          "details": "Cf. RT5"
+        },
+        {
+          "step": 5,
+          "action": "Apprécier respiration (10s max)",
+          "criteria": "Aucun souffle, aucun bruit, thorax immobile"
+        },
+        {
+          "step": 6,
+          "action": "Faire alerter secours",
+          "urgency": "Immédiatement après arrêt respiration"
+        },
+        {
+          "step": 7,
+          "action": "Rechercher signes de circulation",
+          "details": "Pouls carotidien + signes de vie (mouvements, toux)",
+          "duration": "Maximum 10 secondes",
+          "technique": "2-3 doigts sur face latérale cou, ramener vers soi, pousser en profondeur",
+          "decision": "Si doute, commencer compressions sans attendre"
+        },
+        {
+          "step": 8,
+          "action": "30 compressions thoraciques",
+          "frequency": "100/minute",
+          "depth_adult": "4-5 cm",
+          "depth_child": "1/3 épaisseur thorax",
+          "hand_position": "Sternum ligne médiane, pas sur pointe xiphoïde",
+          "technique": "Talons mains superposés, bras tendus, vertical au sol"
+        },
+        {
+          "step": 9,
+          "action": "2 insufflations",
+          "technique": "Bouche-à-bouche ou bouche-à-nez",
+          "duration": "1 seconde chacune",
+          "volume": "Thorax se soulève visiblement"
+        },
+        {
+          "step": 10,
+          "action": "Poursuivre cycles 30/2",
+          "transition": "Rapide entre compressions/insufflations"
+        },
+        {
+          "step": 11,
+          "action": "Surveiller toutes les 2 minutes",
+          "check": "Signes circulation, pouls, respiration",
+          "if_signs": "Arrêter compressions, contrôler respiration, PLS si respiration efficace",
+          "if_respiration_absent": "10 insufflations puis recontrôler"
+        }
+      ],
+      "ventilation_techniques": [
+        {
+          "name": "Bouche-à-bouche",
+          "adult_child": true,
+          "steps": [
+            "Boucher nez entre pouce/index",
+            "Ouvrir bouche en soulevant menton",
+            "Appliquer bouche largement, insuffler 1s jusqu'à soulèvement thorax",
+            "Se redresser, laisser expiration passive"
+          ]
+        },
+        {
+          "name": "Bouche-à-nez",
+          "adult_child": true,
+          "steps": [
+            "Maintenir tête en arrière",
+            "Fermer bouche avec pouce sur lèvre inférieure",
+            "Appliquer bouche sur nez, insuffler 1s"
+          ]
+        },
+        {
+          "name": "Bouche-à-bouche-et-nez",
+          "infant_only": true,
+          "steps": [
+            "Englober bouche et nez avec bouche du sauveteur",
+            "Volume très faible (juste soulèvement thorax visible)"
+          ]
+        }
+      ],
+      "compression_techniques": [
+        {
+          "name": "Adulte",
+          "position": "Centre sternum ligne médiane",
+          "hand_placement": "Talons mains superposés, doigts entrecroisés ou relevés",
+          "depth": "4-5 cm",
+          "frequency": "100/min",
+          "ratio": "Compression/relâchement 50/50"
+        },
+        {
+          "name": "Enfant",
+          "position": "Centre sternum",
+          "hand_placement": "Une ou deux mains selon taille",
+          "depth": "1/3 épaisseur thorax"
+        },
+        {
+          "name": "Nourrisson (<1 an)",
+          "position": "Sternum, une largeur doigt sous ligne mamelons",
+          "technique": "Pulpe 2 doigts ou 2 pouces (thorax englobé)",
+          "depth": "1/3 épaisseur thorax"
+        }
+      ],
+      "special_cases": [
+        {
+          "case": "Sauveteur seul avec adulte",
+          "conduite": "Alerter immédiatement après arrêt respiration, revenir poursuivre RCP"
+        },
+        {
+          "case": "Sauveteur seul avec enfant <8 ans / noyade / intoxication",
+          "conduite": "2 minutes RCP avant d'alerter (apport oxygène prioritaire)"
+        },
+        {
+          "case": "Obstruction VA totale non résolue → inconscience",
+          "conduite": "RCP immédiate (30 compressions d'abord adulte, 5 insufflations enfant), vérifier bouche avant chaque insufflation"
+        }
+      ],
+      "keywords": ["RCP", "réanimation", "compressions thoraciques", "insufflations", "arrêt respiratoire", "pouls carotidien", "30/2", "bouche-à-bouche", "bouche-à-nez", "ACR"]
+    },
+    {
+      "id": "RT7",
+      "rt_number": 7,
+      "title": "La victime se plaint d'un malaise",
+      "category": "malaise",
+      "situation": "Victime consciente, ne se sent pas bien, présente signes visibles de malaise",
+      "objectives": ["Observer", "Questionner", "Installer en position d'attente", "Obtenir avis médical"],
+      "key_concepts": ["Malaise", "Signes de gravité", "Position d'attente", "Avis médical immédiat"],
+      "serious_signs": [
+        "Douleur serrant poitrine ou ventre intense, durable, répétitive",
+        "Transpiration abondante sans effort, pâleur intense (ou lèvres pâles)",
+        "Difficulté respiratoire, impossible de parler",
+        "Paralysie bras/jambe, bouche déformée, difficulté parole"
+      ],
+      "procedure": [
+        {
+          "step": 1,
+          "action": "Observer les signes de gravité",
+          "details": "Identifier signes ci-dessus nécessitant avis médical immédiat"
+        },
+        {
+          "step": 2,
+         "action": "Mettre au repos",
+          "position": "Assise/demi-assise si gêne respiratoire, sinon allongée",
+          "communication": "Parler sans énervement, isoler si agitation"
+        },
+        {
+          "step": 3,
+          "action": "S'enquérir de son état de santé",
+          "questions": [
+            "Durée du malaise ?",
+            "Déjà présenté ce type ?",
+            "Prenez-vous des médicaments ?",
+            "Hospitalisation antérieure ?"
+          ]
+        },
+        {
+          "step": 4,
+          "action": "Prendre avis médical",
+          "urgency": "Immédiat, même si victime demande différé",
+          "destination": "Centre 190"
+        },
+        {
+          "step": 5,
+          "action": "Surveiller",
+          "communication": "Parler régulièrement, expliquer actions",
+          "if_worsens": "Signaler aggravation en rappelant secours"
+        }
+      ],
+      "special_cases": [
+        {
+          "case": "Prise médicamenteuse habituelle",
+          "conduite": "Si victime demande ou médecin 190 prescrit, aider à prendre traitement aux doses prescrites"
+        },
+        {
+          "case": "Demande de sucre",
+          "conduite": "Donner si demandé, préférence morceaux"
+        }
+      ],
+      "keywords": ["malaise", "douleur poitrine", "difficulté respiratoire", "transpiration", "pâleur", "paralysie", "avis médical", "190"]
+    },
+    {
+      "id": "RT8",
+      "rt_number": 8,
+      "title": "La victime se plaint après un traumatisme",
+      "category": "traumatisme",
+      "situation": "Victime consciente seignant après traumatisme (plaie, brûlure, fracture, etc.)",
+      "objectives": ["Installer position d'attente", "Traiter brûlure", "Éviter mobilisation os/articulations"],
+      "key_concepts": ["Plaie grave/simple", "Brûlure", "Attentisme", "Immobilisation", "Tétanos"],
+      "sub_sections": [
+        {
+          "title": "Plaie grave",
+          "definition": "Lésion peau avec atteinte tissus sous-cutanés",
+          "risks": ["Hémorragie", "Défaillance respiratoire", "Infection", "Tétanos"],
+          "serious_wound_criteria": {
+            "localisation": ["Cou", "Œil", "Face", "Thorax", "Abdomen"],
+            "aspect": ["Qui saigne abondamment", "Déchiquetée", "Multiples/étendues"],
+            "mechanism": ["Projectile", "Outil", "Morsure", "Couteau/cutter"]
+          },
+          "simple_wound_criteria": "Petite coupure superficielle, peu saignante, loin orifices naturels/œil",
+          "procedure_grave": [
+            "Identifier gravité (localisation, aspect, mécanisme)",
+            "Installer position d'attente spécifique :",
+            "  - Thorax: demi-assise (faciliter respiration)",
+            "  - Abdomen: plat dos, cuisses fléchies (relâcher muscles)",
+            "  - Œil: plat dos, tête calée, fermer les 2 yeux, NE PAS retirer corps étranger",
+            "  - Autre: horizontale à l'abri",
+            "NE JAMAIS retirer corps étranger inclus dans plaie",
+            "Demander avis médical",
+            "Protéger du froid, parler régulièrement"
+          ],
+          "procedure_simple": [
+            "Se laver mains eau+savon",
+            "Nettoyer plaie eau+savon/antiseptique (doucement)",
+            "Protéger pansement adhésif si risque souillure",
+            "Vérifier vaccination tétanos (conseiller consultation si >5 ans ou non vacciné)",
+            "Surveiller: si rougeur, gonflement, douleur >24h → médecin"
+          ]
+        },
+        {
+          "title": "Brûlure",
+          "definition": "Lésion peau/VA/digestives par chaleur, chimiques, électricité, frottement, radiations",
+          "risks": ["Défaillance circulatoire/respiratoire", "Douleur sévère", "Infection", "Extension de la lésion"],
+          "burn_types": {
+            "grave": [
+              "Cloque > moitié paume main",
+              "Destruction profonde (aspect noirâtre)",
+              "Localisations: visage, main, orifices naturels, articulations"
+            ],
+            "simple": [
+              "Rougeur peau adulte",
+              "Cloque < moitié paume main"
+            ]
+          },
+          "procedure": [
+            "Supprimer cause (vêtements en feu: rouler, étouffer)",
+            "Refroidir immédiatement à l'eau 10-25°C pendant 5 MINUTES (ruissellement sans pression)",
+            "Retirer vêtements sauf ceux qui adhèrent",
+            "Évaluer gravité",
+            "Si grave: allonger sur région non brûlée (drap propre), alerter secours, surveiller continue (toutes 2 min)",
+            "Si simple: protéger par pansement stérile (NE PAS percer cloque), vérifier tétanos, avis médical enfant/nourrisson"
+          ],
+          "special_burns": [
+            {
+              "type": "Produits chimiques sur peau",
+              "action": "Ôter vêtements imbibés, arroser abondamment à grande eau jusqu'à secours"
+            },
+            {
+              "type": "Produit chimique dans œil",
+              "action": "Rincer abondamment l'œil, éviter contamination œil sain"
+            },
+            {
+              "type": "Ingestion produit chimique",
+              "action": "NE PAS faire vomir, NE PAS donner à boire, garder emballage, surveiller"
+            },
+            {
+              "type": "Brûlure électrique",
+              "conduite": "Toujours grave, allonger, parler régulièrement, appeler secours"
+            },
+            {
+              "type": "Inhalation fumée",
+              "conduite": "Demi-assise si gêne respiratoire, parler régulièrement, appeler secours"
+            }
+          ]
+        },
+        {
+          "title": "Traumatisme os/articulations",
+          "definition": "Atteintes osseuses ou articulaires par coup, chute, faux mouvement",
+          "risks": ["Douleur vive", "Complications/séquelles par mauvais mouvement"],
+          "signs": ["Douleur vive", "Difficulté/impossibilité de bouger", "Gonflement/déformation"],
+          "procedure_general": [
+            "Interdire mobilisation du membre",
+            "Alerter secours ou avis médical",
+            "Respecter recommandations secours",
+            "Surveiller en parlant régulièrement",
+            "Protéger du froid"
+          ]
+        },
+        {
+          "title": "Traumatisme tête/nuque/dos",
+          "specific_risks": ["Lésion moelle épinière", "Paralysie"],
+          "procedure": [
+            "NE JAMAIS mobiliser victime",
+            "Conseiller fermement aucun mouvement tête",
+            "Alerter secours d'urgence",
+            "Maintenir tête avec 2 mains de chaque côté (genoux derrière)",
+            "Surveiller continue, parler régulièrement"
+          ]
+        },
+        {
+          "title": "Coup sur la tête avec signes retardés",
+          "signs": ["Agitation/prostration", "Vomissements", "Maux de tête persistants", "Amnésie accident"],
+          "procedure": ["Demander avis médical", "Surveiller régulièrement"]
+        }
+      ],
+      "hygiene_prevention": [
+        "Port gants protection",
+        "Lavage/désinfection mains après contact sang",
+        "Vérification vaccination tétanos systématique"
+      ],
+      "keywords": ["plaie", "brûlure", "traumatisme", "fracture", "tétanos", "immobilisation", "refroidissement", "coup tête", "corps étranger"]
+    }
+  ],
+  "general_program": {
+    "objectif_general": "Exécuter gestes PS pour protéger, alerter, empêcher aggravation en attendant secours spécialisés",
+    "objectifs_formation": [
+      "Assurer protection immédiate adaptée",
+      "Transmettre alerte service urgence adapté",
+      "Réaliser geste urgence (étouffement, saignement)",
+      "Reconnaître inconscience, assurer LVA, apprécier respiration/circulation",
+      "Observer victime consciente, poser questions essentielles, installer position attente"
+    ],
+    "program_structure": {
+      "Partie 1": "Protection et alerte",
+      "Partie 2": "Victime s'étouffe ou saigne abondamment",
+      "Partie 3": "Victime inconsciente",
+      "Partie 4": "Victime consciente et se plaint"
+    }
+  }
+}
