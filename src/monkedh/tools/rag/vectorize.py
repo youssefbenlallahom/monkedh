@@ -1,13 +1,12 @@
-"""
-Module for vectorizing documents and uploading to Qdrant using Ollama embeddings.
-"""
-
 from typing import List, Dict, Any
-from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams, PointStruct
+from qdrant_client import QdrantClient, models
+from qdrant_client.models import Distance, VectorParams, PointStruct, PayloadSchemaType
 import ollama
 import hashlib
-
+import os
+import math
+from dotenv import load_dotenv
+load_dotenv()  # Load environment variables from .env file
 
 class QdrantVectorizer:
     """Handles document vectorization and Qdrant operations using Ollama embeddings."""
@@ -16,48 +15,63 @@ class QdrantVectorizer:
         self,
         qdrant_url: str,
         qdrant_api_key: str,
-        embedding_model: str = "nomic-embed-text",
+        embedding_model: str = "bge-m3",
         ollama_host: str = "http://localhost:11434"
     ):
         """
         Initialize the vectorizer with Qdrant and Ollama.
-        
-        Args:
-            qdrant_url: Qdrant cluster URL
-            qdrant_api_key: Qdrant API key
-            embedding_model: Ollama model name
-                - "nomic-embed-text" (768D, recommended for semantic search)
-                - "mxbai-embed-large" (1024D, high quality)
-                - "llama3.2" (2048D, general purpose)
-            ollama_host: Ollama server URL (default: http://localhost:11434)
         """
         self.qdrant_client = QdrantClient(
             url=qdrant_url,
             api_key=qdrant_api_key,
-            timeout=60  # Increase timeout to 60 seconds for cloud operations
+            timeout=120  # Increased timeout for large batch operations
         )
         
         self.embedding_model = embedding_model
+        ollama_host = os.getenv("OLLAMA_HOST", ollama_host)
         self.ollama_client = ollama.Client(host=ollama_host)
         
         # Auto-detect embedding dimensions
         print(f"  Detecting embedding dimensions for {embedding_model}...")
-        test_response = self.ollama_client.embeddings(
-            model=embedding_model,
-            prompt="test"
-        )
-        self.embedding_dimensions = len(test_response["embedding"])
+        try:
+            # Send single string for test to comply with client's Pydantic validation
+            test_response = self.ollama_client.embeddings(
+                model=embedding_model,
+                prompt="test"
+            )
+            self.embedding_dimensions = len(test_response["embedding"])
+            print(f"✓ Using Ollama: {embedding_model} ({self.embedding_dimensions}D)")
+            print(f"  Host: {ollama_host}")
+        except Exception as e:
+            print(f"Error detecting dimensions from Ollama. Check if Ollama is running at {ollama_host}.")
+            print(f"Details: {e}")
+            self.embedding_dimensions = 768 # Fallback dimension
+
+
+    def _create_payload_indexes(self, collection_name: str) -> None:
+        """Helper to create necessary payload indexes."""
+        # Index fields that will be used for filtering and search
+        index_fields = {
+            "rt_id": PayloadSchemaType.KEYWORD,
+            "numero_rt": PayloadSchemaType.INTEGER,
+            "section_title": PayloadSchemaType.TEXT,
+        }
         
-        print(f"✓ Using Ollama: {embedding_model} ({self.embedding_dimensions}D)")
-        print(f"  Host: {ollama_host}")
+        print(f"Creating payload indexes for collection '{collection_name}'...")
+        for field, schema_type in index_fields.items():
+            try:
+                self.qdrant_client.create_payload_index(
+                    collection_name=collection_name,
+                    field_name=field,
+                    field_schema=schema_type,
+                )
+            except Exception:
+                # Index might already exist
+                pass
     
     def create_collection(self, collection_name: str, recreate: bool = False) -> None:
         """
-        Create a Qdrant collection for storing vectors.
-        
-        Args:
-            collection_name: Name of the collection to create
-            recreate: If True, delete existing collection and recreate
+        Create a Qdrant collection for storing vectors and set up payload indexes.
         """
         collections = self.qdrant_client.get_collections().collections
         collection_exists = any(col.name == collection_name for col in collections)
@@ -68,6 +82,7 @@ class QdrantVectorizer:
                 self.qdrant_client.delete_collection(collection_name)
             else:
                 print(f"Collection '{collection_name}' already exists")
+                self._create_payload_indexes(collection_name)
                 return
         
         print(f"Creating collection: {collection_name}")
@@ -79,54 +94,58 @@ class QdrantVectorizer:
             )
         )
         print(f"Collection '{collection_name}' created successfully")
+        
+        # Improvement: Create payload indexes for fast filtering
+        self._create_payload_indexes(collection_name)
     
     def generate_embeddings(self, texts: List[str]) -> List[List[float]]:
         """
         Generate embeddings for a list of texts using Ollama.
         
-        Args:
-            texts: List of text strings to embed
-            
-        Returns:
-            List of embedding vectors
+        FIX: Iterates through texts one-by-one to avoid Pydantic validation error 
+        when passing a list to the 'prompt' argument.
         """
         embeddings = []
-        batch_size = 32  # Process in batches for progress tracking
-        total_batches = (len(texts) - 1) // batch_size + 1
+        total_texts = len(texts)
         
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            batch_num = i // batch_size + 1
-            print(f"  Generating embeddings for batch {batch_num}/{total_batches} ({len(batch)} texts)")
-            
-            # Ollama processes one text at a time
-            batch_embeddings = []
-            for text in batch:
+        print(f"  Generating embeddings for {total_texts} texts (one-by-one)...")
+
+        # Iterate through texts and call the embeddings API for each one
+        for idx, text in enumerate(texts):
+            # Print progress every 10 texts, or for the first few
+            if total_texts > 10 and (idx + 1) % 10 == 0 or idx < 5:
+                # print(f"    Processing text {idx + 1}/{total_texts}...")
+                pass # Suppress frequent progress updates here
+                
+            try:
+                # Send individual text as a string to comply with client validation
                 response = self.ollama_client.embeddings(
                     model=self.embedding_model,
-                    prompt=text
+                    prompt=text 
                 )
-                batch_embeddings.append(response["embedding"])
-            
-            embeddings.extend(batch_embeddings)
+                embeddings.append(response["embedding"])
+                
+            except Exception as e:
+                # In case of an error, print a warning and append an empty list to maintain array length consistency
+                print(f"  ✗ Error generating embedding for text {idx + 1}. Skipping. Error: {e}")
+                embeddings.append([])
         
-        return embeddings
+        # Filter out failed embeddings (empty lists)
+        valid_embeddings = [e for e in embeddings if e and len(e) == self.embedding_dimensions]
+        if len(valid_embeddings) != total_texts:
+            print(f"  Warning: {total_texts - len(valid_embeddings)} embeddings failed to generate.")
+            
+        return valid_embeddings
     
     def upload_vectors(
         self,
         collection_name: str,
         texts: List[str],
         metadata: List[Dict[str, Any]] = None,
-        batch_size: int = 10  # Smaller batches for cloud Qdrant
+        batch_size: int = 100
     ) -> None:
         """
         Generate embeddings and upload vectors to Qdrant.
-        
-        Args:
-            collection_name: Name of the Qdrant collection
-            texts: List of text chunks to vectorize
-            metadata: Optional list of metadata dictionaries for each text
-            batch_size: Number of vectors to upload per batch (default: 10)
         """
         if metadata is None:
             metadata = [{} for _ in texts]
@@ -135,16 +154,22 @@ class QdrantVectorizer:
             raise ValueError("Number of texts and metadata items must match")
         
         print(f"Generating embeddings for {len(texts)} text chunks...")
-        embeddings = self.generate_embeddings(texts)
+        embeddings_list = self.generate_embeddings(texts)
+
+        if len(texts) != len(embeddings_list):
+            print(f"Warning: {len(texts)} texts, but only {len(embeddings_list)} embeddings generated. Aborting upload.")
+            return
         
-        print(f"Uploading {len(embeddings)} vectors to Qdrant (batch size: {batch_size})...")
+        print(f"Uploading {len(embeddings_list)} vectors to Qdrant (batch size: {batch_size})...")
         points = []
         
-        for idx, (text, embedding, meta) in enumerate(zip(texts, embeddings, metadata)):
-            # Create a unique ID based on index (simpler and more reliable)
-            point_id = idx
+        for idx, (text, embedding, meta) in enumerate(zip(texts, embeddings_list, metadata)):
             
-            # Add text to payload
+            # Improvement: Create a stable, hashed ID for idempotency
+            unique_id_string = f"{text}|{meta.get('source', 'unknown')}|{meta.get('chunk_index', idx)}"
+            # Convert SHA256 hash to an integer ID
+            point_id = int(hashlib.sha256(unique_id_string.encode()).hexdigest(), 16) % (2**63 - 1)
+            
             payload = {
                 "text": text,
                 **meta
@@ -158,30 +183,17 @@ class QdrantVectorizer:
                 )
             )
             
-            # Upload in smaller batches to avoid timeout
             if len(points) >= batch_size or idx == len(texts) - 1:
                 try:
                     self.qdrant_client.upsert(
                         collection_name=collection_name,
                         points=points,
-                        wait=True  # Wait for operation to complete
+                        wait=True
                     )
-                    print(f"  ✓ Uploaded {idx + 1}/{len(texts)} vectors")
                     points = []
                 except Exception as e:
-                    print(f"  ✗ Error uploading batch at index {idx}: {e}")
-                    print(f"  → Retrying with individual points...")
-                    # Retry individual points on failure
-                    for point in points:
-                        try:
-                            self.qdrant_client.upsert(
-                                collection_name=collection_name,
-                                points=[point],
-                                wait=True
-                            )
-                        except Exception as retry_error:
-                            print(f"  ✗ Failed to upload point {point.id}: {retry_error}")
-                    points = []
+                    print(f"  ✗ Critical Error uploading batch at index {idx}. Aborting. Error: {e}")
+                    break
         
         print(f"  ✓ Successfully uploaded all vectors to collection '{collection_name}'")
     
@@ -193,31 +205,34 @@ class QdrantVectorizer:
     ) -> List[Dict[str, Any]]:
         """
         Search for similar vectors in Qdrant.
-        
-        Args:
-            collection_name: Name of the Qdrant collection
-            query: Search query text
-            limit: Number of results to return
-            
-        Returns:
-            List of search results with text and metadata
         """
-        # Generate embedding for query
-        query_embedding = self.generate_embeddings([query])[0]
+        # Generate embedding for query (the query must be contextualized by the caller)
+        print(f"  Generating embedding for contextualized query: '{query[:50]}...'")
+        
+        # Only send the query string, not a list
+        query_embedding_list = self.generate_embeddings([query])
+        
+        if not query_embedding_list:
+            print("  ✗ Failed to generate query embedding.")
+            return []
+            
+        query_vector = query_embedding_list[0]
         
         # Search in Qdrant
         search_results = self.qdrant_client.search(
             collection_name=collection_name,
-            query_vector=query_embedding,
-            limit=limit
+            query_vector=query_vector,
+            limit=limit,
+            with_payload=True
         )
         
         results = []
         for result in search_results:
+            text_content = result.payload.pop("text", "")
             results.append({
-                "text": result.payload.get("text", ""),
+                "text": text_content,
                 "score": result.score,
-                "metadata": {k: v for k, v in result.payload.items() if k != "text"}
+                "metadata": result.payload
             })
         
         return results

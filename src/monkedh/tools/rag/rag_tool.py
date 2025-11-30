@@ -47,7 +47,7 @@ class FirstAidSearchTool(BaseTool):
     qdrant_url: str = ""
     qdrant_api_key: str = ""
     collection_name: str = "first_aid_manual"
-    embedding_model: str = "nomic-embed-text"
+    embedding_model: str = "embeddinggemma:latest"
     ollama_host: str = "http://localhost:11434"
     
     # Cached vectorizer instance
@@ -58,7 +58,7 @@ class FirstAidSearchTool(BaseTool):
         qdrant_url: str,
         qdrant_api_key: str,
         collection_name: str = "first_aid_manual",
-        embedding_model: str = "nomic-embed-text",
+        embedding_model: str = "embeddinggemma:latest",
         ollama_host: str = "http://localhost:11434",
         **kwargs
     ):
@@ -93,7 +93,7 @@ class FirstAidSearchTool(BaseTool):
     def _run(
         self,
         query: str,
-        top_k: int = 5,
+        top_k: int = 2,
         **kwargs: Any
     ) -> str:
         """
@@ -161,7 +161,7 @@ def create_first_aid_search_tool(
     qdrant_url: str,
     qdrant_api_key: str,
     collection_name: str = "first_aid_manual",
-    embedding_model: str = "bge-m3",
+    embedding_model: str = "embeddinggemma:latest",
     ollama_host: str = "http://localhost:11434"
 ) -> FirstAidSearchTool:
     """

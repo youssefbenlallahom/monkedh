@@ -1,0 +1,852 @@
+==================================================
+RT1: LA PROTECTION
+==================================================
+
+SITUATION:
+La victime est exposée à un danger.
+
+RESULTATS ATTENDUS:
+Après avoir lu cette référence technique, vous aurez les connaissances nécessaires pour :
+- Supprimer ou écarter un danger pour assurer sa protection, celle de la victime ou des autres personnes
+- Réaliser un dégagement d'urgence d'une victime exposée à un danger que le sauveteur ne peut supprimer
+- Identifier les signaux d'alerte aux populations et indiquer les mesures de protection à prendre pour soi-même et son environnement
+
+DEVELOPPEMENT:
+
+DEFINITION:
+Une victime, le sauveteur, toute autre personne menacée par un danger doivent en être protégés. Si la protection n'est pas réalisable, la victime doit être dégagée.
+
+Il existe trois niveaux de danger :
+1. Le danger initial ayant provoqué l'accident peut persister
+2. L'accident peut lui-même être générateur de danger
+3. La situation peut être source de nouveau danger
+
+CONDUITE A TENIR:
+
+1. RECONNAITRE LES DANGERS:
+- Effectuer une approche prudente de la zone de l'accident
+- En restant à distance de la victime, regarder tout autour d'elle :
+  * Évaluer la présence de dangers qui peuvent menacer le sauveteur et la victime
+  * Repérer les personnes qui pourraient être exposées aux dangers identifiés
+- Se renseigner éventuellement auprès de témoins
+
+2. PROTEGER:
+- Quand cela est possible, supprimer immédiatement et de façon permanente les dangers environnants pour protéger l'action du sauveteur, la victime et les autres personnes, notamment du sur accident
+- Délimiter clairement, largement et visiblement la zone de danger et empêcher toute intrusion dans cette zone
+- Pour réaliser la protection, utiliser tous les moyens matériels disponibles et s'assurer si besoin du concours de toute personne apte
+
+3. DEGAGER D'URGENCE LA VICTIME:
+Devant l'impossibilité de supprimer le danger et si la victime est incapable de se soustraire elle-même au danger :
+- Dégager la victime le plus rapidement possible
+- La priorité du sauveteur est de se protéger
+- La victime doit être visible, facile à atteindre, et aucune entrave ne doit l'immobiliser
+- Le sauveteur anticipe ses actions et privilégie le chemin le plus sûr et le plus rapide à l'aller comme au retour
+- La victime doit être dégagée vers un endroit suffisamment éloigné du danger et de ses conséquences
+
+TECHNIQUES DE DEGAGEMENT:
+- Choisir la technique en tenant compte de la force physique
+- Saisir solidement la victime par exemple par les poignets ou les chevilles et la tirer sur le sol, quelle que soit sa position, jusqu'à ce qu'elle soit en lieu sûr
+- Se faire aider éventuellement par une autre personne
+- La rapidité de mise en œuvre du dégagement reste primordiale
+
+IMPORTANT: Le dégagement d'urgence est une manœuvre exceptionnelle qui ne doit être utilisée que pour soustraire une victime à un danger vital, réel, immédiat et non contrôlable. Elle peut être dangereuse pour une victime atteinte d'un traumatisme.
+
+4. SI DANGER NE PEUT ETRE SUPPRIME NI VICTIME DEGAGEE:
+- Alerter ou faire alerter les secours spécialisés
+- Assurer une surveillance permanente de la zone de danger où les risques non contrôlés persistent et empêcher toute personne de pénétrer dans cette zone jusqu'à l'arrivée des secours
+- Le sauveteur doit en priorité assurer sa sécurité et celle des témoins
+
+CAS PARTICULIERS:
+
+1. Protection d'un accident de la route:
+- Allumer ses feux de détresse dès que l'on est en vue d'un accident et ralentir
+- Garer son véhicule, si possible après le lieu de l'accident, sur la bande d'arrêt d'urgence
+- Faire descendre immédiatement tous les occupants et les mettre en sécurité sur le bas côté ou derrière les glissières de sécurité
+- Baliser de part et d'autre de l'accident à 150 ou 200m (triangle de présignalisation, lampe électrique, linge blanc, feux de détresse)
+- Interdire toute approche si un danger persiste (transport de matières dangereuses)
+- Ne pas fumer et ne pas laisser fumer
+- En cas de feu naissant dans un compartiment moteur, utiliser un extincteur
+- Couper le contact des voitures accidentées
+
+2. Protection dans d'autres situations:
+- Pour pénétrer dans un local enfumé, non ventilé : retenir sa respiration, la durée de la manœuvre ne doit pas excéder 30 secondes
+- En cas d'incendie : se protéger au maximum avec ses vêtements, se couvrir le visage
+- S'il y a risque d'explosion par fuite de gaz : ne pas provoquer d'étincelles (interrupteurs, sonnerie, lampe de poche)
+- En cas de danger électrique : couper le courant avant de toucher la victime
+
+ARBRE DE DECISION - PROTECTION:
+Danger contrôlable pour le sauveteur? 
+  OUI → Supprimer le danger pour le sauveteur
+  NON → Baliser la zone / Faire alerter
+
+Danger contrôlable pour la victime?
+  OUI → Supprimer le danger pour la victime
+  NON → Dégagement d'urgence possible?
+        OUI → Dégager la victime
+        NON → Baliser la zone / Faire alerter
+
+Danger contrôlable pour les témoins?
+  OUI → Supprimer le danger pour les témoins
+  NON → Baliser la zone / Alerter / Surveiller
+
+→ S'approcher et parler à la victime
+
+==================================================
+RT2: L'ALERTE
+==================================================
+
+SITUATION:
+Le sauveteur est confronté à une situation nécessitant le recours à un service d'urgence.
+
+RESULTATS ATTENDUS:
+Après avoir lu cette référence technique, vous aurez les connaissances nécessaires pour transmettre au service de secours d'urgence adapté les informations nécessaires à son intervention après avoir observé la ou les victimes.
+
+ABREVIATIONS:
+SAMU : Service d'Aide Médicale Urgente
+
+DEVELOPPEMENT:
+
+DEFINITION:
+L'alerte est l'action qui consiste à informer un service d'urgence de la présence d'une ou plusieurs victimes affectées par une ou plusieurs détresses ainsi que de la nature de l'assistance qui leur est nécessaire.
+
+Dans ce contexte, l'absence d'information d'un service d'urgence peut compromettre la vie ou la santé d'une victime malgré les premiers secours assurés par un sauveteur.
+
+IMPORTANCE:
+La vie de toute personne peut, un jour ou l'autre, être menacée par un accident ou une maladie grave. Toute personne témoin d'une situation de détresse doit, après avoir protégé, alerter les secours et pratiquer les gestes simples pouvant conserver une vie en attendant leur arrivée.
+
+LA CHAINE DE SECOURS NE PEUT FONCTIONNER SANS SON PREMIER MAILON : LE TEMOIN QUI DONNE "L'ALERTE"
+
+L'alerte, transmise au service d'urgence par les moyens les plus appropriés disponibles, doit être rapide et précise pour diminuer les délais de mise en œuvre de la chaîne de secours et de réanimation. Tout retard et toute imprécision peuvent concourir à l'aggravation de l'état de la victime.
+
+CONDUITE A TENIR:
+
+1. DECIDER D'ALERTER LES SECOURS:
+- À l'occasion de toute situation présentant des risques ou lorsqu'une vie est en danger
+- Dès que possible, mais après une évaluation rapide et succincte de la situation et des victimes
+
+2. SE MUNIR D'UN MOYEN DE COMMUNICATION:
+L'alerte des secours peut être réalisée à l'aide :
+- D'un téléphone fixe ou mobile
+- D'une cabine téléphonique
+- D'une borne d'appel (reliée directement à un service de secours)
+
+Par le sauveteur ou par l'intermédiaire d'une tierce personne à qui l'on donne des consignes d'appel.
+
+3. CHOISIR UN SERVICE DE SECOURS:
+- Le 190 : le SAMU pour tout problème urgent de santé (secours médicalisé)
+- Le 198 : LA PROTECTION CIVILE pour tout problème de secours
+- Le 197 et le 193 : la POLICE et la GARDE NATIONALE pour tout problème de sécurité ou d'ordre public
+
+4. TRANSMETTRE LES INFORMATIONS:
+L'appelant doit pouvoir renseigner les services d'urgence en donnant les indications suivantes :
+- NATURE DU PROBLEME : malade ou accidenté
+- RISQUES éventuels : incendie, explosion, effondrement, produits chimiques et tout autre danger
+- LOCALISATION très précise de l'événement
+- NOMBRE de personnes concernées
+- NUMERO DE TELEPHONE ou de la borne d'où l'on appelle, si nécessaire donner son nom
+- Appreciation de la GRAVITE de l'état de chaque victime
+- PREMIERES MESURES PRISES ET GESTES EFFECTUES
+
+Et répondre aux questions qui lui seront posées par les secours ou par un médecin.
+
+Un dialogue peut s'instaurer entre l'appelant et le service d'urgence. Ce dernier peut donner des conseils et/ou des instructions sur la conduite à tenir.
+
+Le message d'alerte achevé, attendre les instructions avant d'interrompre la communication.
+
+ARBRE DE DECISION - ALERTE:
+Trouver le moyen de communication → Choisir le service de secours → Transmettre les informations → Secourir ou continuer à secourir
+
+==================================================
+RT3: LA VICTIME S'ETOUFFE
+==================================================
+
+SITUATION:
+La respiration spontanée de la victime consciente est brutalement et complètement arrêtée.
+
+RESULTATS ATTENDUS:
+Identifier l'obstruction des voies aériennes, réaliser l'enchaînement des techniques qui permettent d'obtenir une désobstruction des voies aériennes chez l'adulte, l'enfant et le nourrisson. Indiquer la conduite à tenir devant une victime qui présente une obstruction partielle des voies aériennes.
+
+DEVELOPPEMENT:
+
+DEFINITION:
+Le mouvement de l'air entre l'extérieur et les poumons est complètement empêché du fait d'une obstruction totale des voies aériennes par un corps étranger.
+
+RISQUES:
+Les voies aériennes permettent le passage de l'air de l'extérieur vers les poumons et inversement. Si ce passage est interrompu, l'oxygène n'atteint pas les poumons et la vie de la victime est immédiatement menacée.
+
+SIGNES:
+La victime est le plus souvent en train de manger, ou, s'il s'agit d'un enfant, en train de jouer avec un objet porté à la bouche.
+
+Brutalement, la victime :
+- Fait des efforts pour respirer sans que l'air n'entre ni ne sorte
+- Porte la main à la gorge
+- Ne peut plus parler
+- Garde la bouche ouverte
+- Ne peut plus tousser
+
+CONDUITE A TENIR:
+
+1. Laisser la victime dans la position où elle se trouve (debout ou assise)
+2. Constater l'obstruction totale des voies aériennes
+3. Désobstruer les voies aériennes en lui donnant 5 claques dans le dos
+4. En cas d'inefficacité des claques dans le dos, réaliser 5 compressions abdominales selon la méthode de Heimlich
+5. Constater l'efficacité des claques dans le dos ou des compressions
+
+EFFICACITE DES MANOEUVRES:
+Le corps étranger peut se dégager progressivement au cours des différentes tentatives. L'efficacité peut s'évaluer sur :
+- L'expulsion du corps étranger
+- L'apparition d'effort de toux
+- La reprise de la respiration
+
+Après expulsion du corps étranger, le sauveteur doit parler à la victime, la réconforter et demander un avis médical au SAMU.
+
+SI L'OBSTRUCTION PERSISTE:
+- Réaliser à nouveau 5 claques vigoureuses dans le dos puis 5 compressions abdominales et ainsi de suite
+- Arrêter les manœuvres dès que la désobstruction est obtenue ou si la victime perd connaissance
+- Faire alerter les secours
+
+SI LA VICTIME PERD CONNAISSANCE:
+Pratiquer les gestes qui peuvent s'imposer (cf. RT5 et RT6)
+
+TECHNIQUES:
+
+CLAQUES DANS LE DOS:
+- Se placer sur côté et légèrement en arrière de la victime
+- Soutenir son thorax avec une main et la pencher suffisamment en avant pour que l'obstacle dégagé sorte de la bouche
+- Lui donner 5 claques vigoureuses dans le dos, entre les deux omoplates avec le plat de l'autre main ouverte
+- Arrêter les claques dès la désobstruction obtenue
+
+COMPRESSIONS ABDOMINALES (METHODE HEIMLICH):
+- Se placer derrière la victime, contre son dos (en fléchissant les genoux si la victime est assise)
+- Passer les bras sous les siens de part et d'autre de la partie supérieure de son abdomen
+- S'assurer que la victime est bien penchée en avant
+- Mettre le poing sur la partie supérieure de l'abdomen, au creux de l'estomac, au-dessus du nombril et en dessous du sternum
+- Placer l'autre main sur la première
+- Tirer franchement en exercçant une pression vers l'arrière et vers le haut
+- Si le corps étranger n'est pas rejeté, le rechercher et le retirer prudemment avec les doigts
+
+CAS PARTICULIERS:
+
+OBSTRUCTION TOTALE CHEZ LE NOURRISSON:
+- Réaliser 5 claques dans le dos : coucher le nourrisson tête penchée en avant à califourchon sur l'avant-bras
+- Donner 5 claques entre les deux omoplates
+- Si inefficace, réaliser 5 compressions thoraciques avec 2 doigts au milieu de la poitrine
+- Alterner 5 claques et 5 compressions jusqu'à désobstruction ou perte de connaissance
+
+OBSTRUCTION PARTIELLE DES VOIES AERIENNES:
+Si la victime a du mal à respirer, fait des efforts de toux et présente un sifflement :
+- La laisser dans la position où elle se sent le mieux (le plus souvent assise)
+- Demander un avis médical en appelant le SAMU
+- NE JAMAIS pratiquer les techniques de désobstruction (risque d'aggraver l'obstruction)
+
+ARBRE DE DECISION - VICTIME QUI S'ETOUFFE:
+Déboucher les voies aériennes
+- La victime respire-t-elle?
+  OUI → Garder la position / Surveillance / Parler à la victime / Avis médical
+  NON → 5 claques dans le dos
+- Est-ce efficace?
+  OUI → Surveillance / Parler à la victime / Avis médical
+  NON → 5 compressions de l'abdomen
+- Est-ce efficace?
+  OUI → Surveillance / Parler à la victime / Avis médical
+  NON → La victime réagit-elle?
+    OUI → Continuer les manœuvres
+    NON → Voir RT6 (Victime inconsciente et ne respire pas)
+
+==================================================
+RT4: LA VICTIME SAIGNE ABONDAMMENT
+==================================================
+
+SITUATION:
+La victime présente un saignement abondant visible à l'œil nu par une plaie.
+
+RESULTATS ATTENDUS:
+- Devant une personne qui présente un saignement abondant :
+  * Réaliser une compression directe de l'endroit qui saigne
+  * Réaliser une compression à distance à l'aide d'un point de compression si la compression directe est impossible ou insuffisante
+  * Réaliser un garrot si le point de compression est impossible ou insuffisant
+- Choisir le geste et/ou la position la plus adaptée pour éviter l'aggravation d'une victime qui saigne du nez ou qui vomit/crache du sang
+
+DEVELOPPEMENT:
+
+DEFINITION:
+Une perte de sang provient d'une plaie ou d'un orifice naturel. Quand cette perte de sang est abondante ou prolongée, on parle d'hémorragie.
+
+RISQUES:
+La perte abondante ou prolongée de sang conduit à une détresse qui menace immédiatement ou à très court terme la vie d'une victime. Tout saignement nécessite une action de secours immédiate, rapide et efficace.
+
+SIGNES:
+La victime présente une perte de sang par une plaie. On distingue :
+- Saignement dû à une écorchure, éraflure ou abrasion cutanée qui s'arrête spontanément
+- Saignement abondant ou hémorragie qui imbibe un mouchoir en quelques secondes et ne s'arrête pas spontanément
+
+CONDUITE A TENIR:
+
+1. CONSTATER L'HEMORRAGIE:
+- L'hémorragie est le plus souvent évidente
+- Une hémorragie doit aussi être recherchée sur un blessé car elle peut être temporairement masquée par la position ou un vêtement
+
+2. ARRETER L'HEMORRAGIE:
+- Comprimer directement l'endroit qui saigne quel que soit le lieu de la plaie, jusqu'à l'arrivée des secours, après avoir écarté les vêtements si nécessaire
+- Comprimer à distance à l'aide d'un point de compression si la compression directe est impossible ou inefficace
+- Poser un garrot en dernière limite si la compression directe puis le point de compression sont impossibles ou inefficaces
+
+3. ALLONGER LA VICTIME EN POSITION HORIZONTALE:
+Cette position retarde ou empêche l'installation d'une détresse liée à la perte importante de sang.
+
+4. DONNER L'ALERTE OU FAIRE DONNER L'ALERTE
+
+5. VERIFIER QUE L'HEMORRAGIE EST ARRETEE et parler régulièrement à la victime
+
+PRECAUTIONS:
+- Ne pas donner à boire
+- Protéger la victime contre le froid et/ou les intempéries
+- Expliquer à la victime ce qui se passe pour la réconforter
+
+PROTECTION DU SAUVETEUR (risque de maladies transmissibles par le sang):
+- Se protéger par le port de gants ou en interposant un morceau de plastique
+- Utiliser une technique d'arrêt du saignement qui n'expose pas au contact direct du sang
+- Toujours se laver les mains, les désinfecter et retirer les vêtements souillés
+- Éviter de porter les mains à la bouche, au nez ou aux yeux
+- En cas d'inquiétude, consulter un service médicalisé
+
+TECHNIQUES:
+
+COMPRESSION DIRECTE DE L'ENDROIT QUI SAIGNE:
+- Appuyer directement sur l'endroit qui saigne avec les doigts ou la paume de la main
+- Cette technique est facile et rapide, elle suffit dans la plupart des cas
+
+TAMPON RELAIS:
+Si le sauveteur doit se libérer :
+- Utiliser un tampon de tissu ou de papier (mouchoir plié) maintenu par un lien large
+- Le tissu doit être propre et couvrir complètement la plaie
+- La substitution doit être la plus rapide possible
+- Le lien large doit recouvrir complètement le tampon et être assez long pour faire au moins 2 tours
+- Le lien doit être suffisamment serré pour garder une pression suffisante
+
+COMPRESSION A DISTANCE: LES POINTS DE COMPRESSION:
+Utilisés quand :
+- La compression directe est impossible (fracture ouverte, plaie inaccessible)
+- La compression directe est inefficace
+- Le sauveteur présente une plaie des mains
+
+PRINCIPAL POINT DE COMPRESSION:
+- Membre inférieur : au pli de l'aine
+- Membre supérieur : sur la face interne du bras
+- Cou : à la base du cou
+
+TECHNIQUE:
+- Pression manuelle ferme et continue entre le cœur et la plaie
+- Maintenir la pression pendant le temps nécessaire à l'arrivée des secours
+
+COMPRESSION A DISTANCE: LE GARROT:
+Utilisé en dernière limite quand :
+- Le point de compression est impossible à réaliser
+- Le point de compression est inefficace
+- Le sauveteur isolé doit donner l'alerte ou s'occuper d'une autre victime
+
+MISE EN PLACE:
+- Membre inférieur : sur la cuisse, entre la plaie et l'aine
+- Membre supérieur : sur le bras, entre la plaie et l'aisselle
+- Utiliser un lien large (cravate, écharpe, foulard) jamais avec une ficelle ou fil de fer
+- Le garrot doit rester toujours visible
+- Noter l'heure de pose (heures et minutes)
+- Une fois posé, le garrot ne doit jamais être desserré (seul un médecin peut l'enlever)
+
+CAS PARTICULIERS:
+
+A. SAIGNEMENT DU NEZ:
+1. Laisser la victime assise, tête penchée en avant (ne pas l'allonger)
+2. Lui demander de comprimer avec son doigt la narine qui saigne, pendant 10 minutes maximum
+3. Si le saignement ne s'arrête pas ou se reproduit, consulter un médecin
+4. En cas de saignement après chute ou coup, alerter les secours médicalisés
+
+B. VICTIME QUI VOMIT OU CRACHE DU SANG:
+1. Alerter immédiatement un médecin ou les secours médicalisés (symptôme grave)
+2. Installer la victime assise ou demi-assise
+3. Conserver les vomissements ou crachats dans un récipient
+4. Parler régulièrement à la victime
+5. Si elle ne répond plus, pratiquer les gestes qui s'imposent
+
+C. AUTRES PERTES DE SANG:
+Allonger la victime, alerter le médecin, surveiller sans lui donner à boire
+
+ARBRE DE DECISION - VICTIME QUI SAIGNE:
+La victime saigne abondamment
+→ Arrêter le saignement
+  - Compression locale possible?
+    OUI → Compression directe locale
+  - Efficace?
+    NON → Le sauveteur doit-il se libérer?
+      OUI → Poser un tampon relais
+      NON → Le point de compression est-il possible?
+        OUI → Point de compression
+        NON → Poser un garrot
+→ Allonger la victime dès que possible
+→ FAIRE ALERTER ou ALERTER les secours d'urgence
+→ Surveiller l'arrêt du saignement
+
+==================================================
+RT5: LA VICTIME EST INCONSCIENTE
+==================================================
+
+SITUATION:
+La victime ne répond pas aux questions, ne réagit pas et semble endormie.
+
+RESULTATS ATTENDUS:
+Maintenir libres les voies aériennes d'une victime inconsciente qui respire en attendant l'arrivée des secours.
+
+ABREVIATIONS:
+LVA : Liberté des Voies Aériennes
+PLS : Position Latérale de Sécurité
+
+DEVELOPPEMENT:
+
+DEFINITION:
+La victime ne répond pas aux questions, reste immobile et ne réagit pas.
+
+CAUSES DES TROUBLES DE LA CONSCIENCE:
+- Traumatiques
+- Médicales
+- Toxiques
+
+RISQUES:
+Une personne inconsciente, laissée sur le dos, est exposée à :
+- Obstruction des voies aériennes par la chute de la langue en arrière
+- Encombrement des voies aériennes par écoulement de liquides (salive, sang, liquide gastrique) dans les poumons
+
+Cette situation peut évoluer vers l'arrêt respiratoire et circulatoire sans intervention.
+
+CONDUITE A TENIR:
+
+1. REALISER LA PROTECTION du sauveteur et de la victime
+
+2. RECHERCHER TOUTE DETRESSE EVIDENTE:
+- S'assurer qu'il n'y a pas de saignements visibles et importants
+
+3. APPRECIER L'ETAT DE CONSCIENCE:
+- Poser une question simple : «Comment ça va ?», «Vous m'entendez ?»
+- Prendre sa main et lui demander : «Serrez-moi la main», «Ouvrez les yeux»
+- Si la victime ne répond pas ou ne réagit pas : elle est inconsciente
+
+4. APPELER «A L'AIDE » si vous êtes seul
+
+5. ASSURER IMMEDIATEMENT LA LIBERTE DES VOIES AERIENNES (LVA):
+- Desserrer ou dégrafer ce qui gêne la ventilation (ceinture, cravate, col serré)
+- Basculer prudemment la tête en arrière et élever le menton
+- Ouvrir la bouche et retirer corps étrangers visibles et prothèses dentaires décrochées
+- Se pencher sur la victime pour rechercher :
+  * Flux d'air expiré par le nez et la bouche
+  * Bruits normaux ou anormaux de respiration
+  * Soulèvement du ventre et/ou de la poitrine
+- Cette recherche dure 10 secondes maximum
+
+6. SI LA VICTIME RESPIRE:
+- Placer la victime en Position Latérale de Sécurité (PLS)
+- La victime doit être sur le côté, position la plus latérale possible
+- La position doit être stable
+- Éviter toute compression de la poitrine
+- Permettre la surveillance de la respiration
+
+7. ALERTER OU FAIRE ALERTER LES SECOURS:
+- Le meilleur moment est quand on reconnaît que la victime est inconsciente et qu'elle respire
+- Si seul : après avoir mis en PLS, aller alerter si pas de témoin
+- Si pas seul : s'assurer de l'alerte donnée
+
+8. CONTROLER LA RESPIRATION:
+- Surveiller toutes les minutes
+- Regarder le ventre et la poitrine se soulever
+- Écouter les bruits respiratoires
+- Sentir le soulèvement du thorax
+- Si la respiration s'arrête : replacer la victime sur le dos et pratiquer RT6
+
+9. PROTEGER LA VICTIME contre le froid, la chaleur ou les intempéries
+
+CAS PARTICULIERS:
+
+1. NOURRISSON ET ENFANT:
+Conduite identique à l'adulte
+
+2. FEMME ENCEINTE:
+Toujours allongée sur le côté gauche pour éviter la compression des vaisseaux
+
+3. TRAUMATISE:
+En cas de lésion thoracique ou membre, coucher sur le côté sain
+
+4. VICTIME RETROUVEE COUCHEE SUR LE COTE:
+Compléter la LVA, stabiliser la position, apprécier la respiration
+
+TECHNIQUE DE LA PLS:
+
+A. PREPARER LE RETOURNEMENT:
+- Retirer les lunettes
+- Allonger les membres inférieurs côte à côte
+- Placer le bras le plus proche à angle droit du corps, paume vers le haut
+- Se placer à genoux au côté de la victime
+- Saisir le bras opposé, placer le dos de la main contre son oreille
+- Saisir la jambe opposée derrière le genou
+
+B. RETOURNER LA VICTIME:
+- Tirer sur la jambe pour faire rouler la victime vers le sauveteur
+- Le mouvement doit être sans brusquerie
+- Dégagez doucement la main sous la tête tout en maintenant le coude
+- Ajuster la jambe du dessus à angle droit (hanche et genou)
+- Ouvrir la bouche pour écoulement des liquides
+
+C. SURVEILLER:
+- Apprécier toutes les minutes la respiration
+
+ARBRE DE DECISION - VICTIME INCONSCIENTE:
+La victime est inconsciente
+→ Libérer ses voies aériennes
+→ Appeler « à l'aide »
+→ LVA (Liberté des Voies Aériennes)
+- La victime respire-t-elle?
+  OUI → Mise sur le côté (PLS) / (Faire) alerter / Toutes les minutes vérifier
+  NON → Voir RT6 (Victime ne respire plus)
+
+==================================================
+RT6: LA VICTIME NE RESPIRE PLUS (RCP)
+==================================================
+
+SITUATION:
+La victime est inconsciente et ne présente plus de mouvements respiratoires.
+
+RESULTATS ATTENDUS:
+Mettre en œuvre une réanimation cardio-pulmonaire de base chez une victime inconsciente qui ne respire pas.
+
+ABREVIATIONS:
+LVA : Liberté des Voies Aériennes
+PLS : Position Latérale de Sécurité
+RCP : Réanimation Cardio-Pulmonaire
+
+DEFINITION:
+La victime ne parle pas, ne réagit pas, aucun mouvement de la poitrine n'est visible et aucun bruit ou souffle n'est perceptible.
+
+CAUSES:
+- Évolution d'une obstruction brutale des voies aériennes
+- Intoxication
+- Traumatisme, noyade, électricité
+- Maladie (infarctus du myocarde)
+
+RISQUES:
+La vie d'une victime en arrêt respiratoire est à brève échéance menacée. Sans geste de secours, un arrêt cardiaque survient.
+
+CONDUITE A TENIR:
+
+1. REALISER LA PROTECTION
+
+2. APPRECIER L'ETAT DE CONSCIENCE:
+La victime est inconsciente (ne répond pas, ne réagit pas)
+
+3. APPELER « A L'AIDE » si vous êtes seul
+
+4. LVA IMMEDIATE:
+- Desserrer ceinture, col serré
+- Basculer tête en arrière, élever le menton
+- Ouvrir la bouche, retirer corps étrangers
+- Garder le menton élevé
+
+5. APPRECIER LA RESPIRATION pendant 10 secondes:
+Aucun souffle, aucun bruit, ni le ventre ni la poitrine ne se soulèvent
+
+6. FAIRE ALERTER LES SECOURS immédiatement après avoir reconnu l'arrêt de la respiration
+
+7. RECHERCHER LES SIGNES DE CIRCULATION:
+Signes de circulation = Signes de vie (mouvements, toux, respiration) + Pouls carotidien
+
+CONTROLE DU POULS CAROTIDIEN:
+- Se placer du côté de la carotide à palper
+- Chez l'adulte et l'enfant : palper sur la face latérale du cou entre la pulpe de 2-3 doigts et la colonne cervicale
+- Ne pas mettre plus de 10 secondes
+- En cas de doute, débuter immédiatement les compressions thoraciques
+
+8. REALISER 30 COMPRESSIONS THORACIQUES:
+- Victime sur le dos, sur un plan dur
+- Déterminer la zone d'appui (centre du thorax, milieu du sternum)
+- 30 compressions successives
+- Fréquence : 100 compressions par minute
+- Profondeur : 4-5 cm chez l'adulte, 1/3 de l'épaisseur du thorax chez l'enfant
+
+9. REALISER 2 INSUFFLATIONS:
+- Technique bouche-à-bouche ou bouche-à-nez
+- Volume suffisant pour voir la poitrine se soulever
+- Durée : 1 seconde par insufflation
+
+10. POURSUIVRE AU RYTHME 30/2:
+- 30 compressions pour 2 insufflations
+- Rythme soutenu, transitions rapides
+- Durée totale : 5 cycles (2 minutes)
+
+11. SURVEILLER ET POURSUIVRE:
+- Toutes les 2 minutes (5 cycles), vérifier les signes de circulation
+- Si signes de vie apparaissent : arrêter les compressions, contrôler respiration
+- Si pouls perceptible mais pas de respiration : 10 insufflations puis re-évaluer
+
+TECHNIQUES DE VENTILATION ARTIFICIELLE:
+
+BOUCHE-A-BOUCHE:
+- S'agenouiller à côté de la victime
+- Obstruer le nez entre pouce et index
+- Maintenir tête basculée en arrière
+- Ouvrir légèrement la bouche
+- Appliquer bouche autour de la bouche de la victime
+- Insuffler progressivement 1 seconde
+- Laisser la poitrine s'affaisser
+
+BOUCHE-A-NEZ:
+- Utiliser si bouche inaccessible
+- Fermer la bouche de la victime
+- Appliquer bouche autour du nez
+- Insuffler progressivement
+
+BOUCHE-A-BOUCHE-ET-NEZ (NOURRISSON):
+- Englober bouche et nez avec la bouche
+- Volume très faible (juste voir poitrine se soulever)
+
+TECHNIQUE COMPRESSIONS THORACIQUES:
+
+ADULTE ET ENFANT:
+- Se placer à genoux près de la victime
+- Dénuder la poitrine
+- Appuyer le "talon" d'une main au centre du sternum
+- Placer l'autre main au-dessus, entrecroiser les doigts
+- Pressions verticales, coudes tendus
+- Fréquence : 100/min
+- Rapport compression/relâchement : 50/50
+- Thorax doit reprendre complètement sa forme
+
+NOURRISSON (<1 AN):
+- Localiser sternum
+- Placer pulpe de 2 doigts ou 2 pouces à une largeur de doigt sous ligne des mamelons
+- Comprimer 1/3 de l'épaisseur du thorax
+- Fréquence : 100/min
+
+CAS PARTICULIERS:
+
+1. SAUVETEUR SEUL:
+- ADULTE : alerter immédiatement après constat arrêt respiration, puis revenir pour RCP
+- ENFANT <8 ans, NOYADE, INTOXICATION : réaliser 2 minutes RCP avant d'alerter
+
+2. APRES OBSTRUCTION TOTALE DES VA:
+- Débuter immédiatement RCP (compressions chez adulte, 5 insufflations chez enfant)
+- Après chaque série, contrôler VA
+- Retirer corps étranger visible
+
+ARBRE DE DECISION - VICTIME INCONSCIENTE NE RESPIRE PLUS:
+- La victime est inconsciente / ne respire plus / (sauveteur seul)
+- Enfant ou nourrisson?
+  OUI → Réaliser 5 insufflations puis RCP ou ventilation artificielle 1 min → Alerter → Revenir
+  NON → Alerter immédiatement → Revenir → 5 cycles de 30 compressions + 2 insufflations
+
+==================================================
+RT7: LA VICTIME SE PLAINT D'UN MALAISE
+==================================================
+
+SITUATION:
+La victime est consciente, ne se sent pas bien et présente des signes visibles de détresse.
+
+RESULTATS ATTENDUS:
+Observer une personne victime d'un malaise, lui poser les questions essentielles, la mettre au repos et l'installer en position d'attente avant de demander un avis médical.
+
+DEVELOPPEMENT:
+
+DEFINITION:
+Un malaise est une sensation pénible traduisant un trouble du fonctionnement de l'organisme, sans que le sujet puisse en identifier obligatoirement l'origine. Il peut être fugace ou durable, de survenue brutale ou progressive.
+
+Un malaise traduit une défaillance, temporaire ou durable, d'une partie de l'organisme, sans inconscience, arrêt respiratoire ou cardiaque initial.
+
+RISQUES:
+Certains malaises sont dits graves car ils peuvent être révélateurs d'une situation pouvant à tout moment entraîner une détresse vitale. Ces malaises graves appellent une réponse immédiate par les secours d'urgence.
+
+CONDUITE A TENIR:
+
+1. OBSERVER LES SIGNES DE GRAVITE:
+La victime réagit et répond aux questions mais présente :
+- Douleur serrant la poitrine ou douleur du ventre intense, qui dure ou se répète
+- Sensation de froid, sueurs abondantes sans effort, pâleur intense
+- Difficulté à respirer, impossible de parler ou avec grande difficulté
+- Paralysie du bras ou de la jambe, même transitoire
+- Difficulté à parler et bouche déviée
+
+2. METTRE LA VICTIME AU REPOS:
+- La rassurer, lui parler sans énervement, la calmer
+- En cas de gêne respiratoire : installer en position assise ou demi-assise
+- Dans autres cas : l'allonger sauf si elle adopte spontanément une autre position
+
+3. S'ENQUERIR DE SON ETAT DE SANTE:
+- Depuis combien de temps dure ce malaise?
+- Avez-vous déjà présenté ce type de malaise?
+- Prenez-vous des médicaments?
+- Avez-vous été gravement malade ou hospitalisé?
+
+4. PRENDRE UN AVIS MEDICAL:
+- Obtenir immédiatement un avis médical ou appeler le SAMU (190)
+- Ne pas différer l'appel même à la demande de la victime
+- Transmettre précisément ce qui a été observé
+
+5. SURVEILLER LA VICTIME:
+- Parler régulièrement à la victime
+- Si elle parle : elle est consciente, poursuivre surveillance
+- Si elle ne répond plus : pratiquer les gestes qui s'imposent
+- Signaler toute aggravation
+
+CAS PARTICULIER - PRISE DE MEDICAMENT:
+Dans certaines maladies, un traitement particulier doit être pris en cas de malaise :
+- Aider la victime à prendre son traitement prescrit aux doses indiquées
+- Si victime demande spontanément du sucre, lui en donner (diabétique)
+
+ARBRE DE DECISION - VICTIME CONSCIENTE MALAISE:
+- Observer / Mettre au repos
+- Victime est-elle au repos?
+  NON → Mettre au repos
+  OUI → Interroger (durée, antécédents, médicaments, hospitalisation)
+- Alerter les secours médicalisés
+- La victime réclame son médicament ou du sucre?
+  OUI → Aider à prendre
+  NON → Toutes les minutes observer / parler
+
+==================================================
+RT8: LA VICTIME SE PLAINT APRES UN TRAUMATISME
+==================================================
+
+SITUATION:
+La victime est consciente et se plaint après un traumatisme.
+
+RESULTATS ATTENDUS:
+- Installer en position d'attente une victime qui présente une plaie grave
+- Arroser à l'eau une brûlure venant de se produire avant d'identifier sa gravité
+- Éviter toute mobilisation d'une personne victime d'une atteinte traumatique des os ou des articulations en attendant les secours
+
+DEVELOPPEMENT:
+
+1. PLAIES
+
+DEFINITION:
+Lésion de la peau, revêtement protecteur du corps, avec atteinte possible des tissus sous-jacents. Provoquée par coupure, éraflure, piqure.
+
+RISQUES:
+- Hémorragie
+- Défaillance respiratoire
+- Complications infectieuses (tétanos)
+- Maladies transmissibles
+
+SIGNES:
+Deux types de plaies :
+- Plaie grave : localisation (cou, œil, thorax, abdomen), aspect (saignante, déchiquetée, multiple), mécanisme (projectile, couteau, morsure)
+- Plaie simple : petite coupure superficielle, saignant peu
+
+CONDUITE A TENIR - PLAIE GRAVE:
+1. Identifier la gravité (localisation, aspect, mécanisme)
+2. Installer en position d'attente :
+   - Plaie du thorax : demi-assise (facilite la respiration)
+   - Plaie de l'abdomen : à plat dos, cuisses fléchies (relâche les muscles)
+   - Plaie de l'œil : à plat dos, tête calée, fermer les deux yeux
+   - Autre : allonger horizontalement
+3. Ne jamais retirer un corps étranger inclus (couteau, verre)
+4. Demander un avis médical
+5. Protéger du froid/chaleur
+6. Parler régulièrement
+7. Signaler toute aggravation
+
+CONDUITE A TENIR - PLAIE SIMPLE:
+1. Se laver les mains
+2. Nettoyer la plaie à l'eau et au savon, avec compresse stérile ou antiseptique
+3. Protéger par pansement adhésif
+4. Vérifier vaccination antitétanique (<5 ans)
+5. Consulter si rougeur, gonflement, douleur dans les 24h
+
+PROTECTION DU SAUVETEUR:
+- Port de gants
+- Lavage/désinfection des mains
+
+2. BRÛLURES
+
+DEFINITION:
+Lésions de la peau et/ou des voies aériennes ou digestives provoquées par la chaleur, substances chimiques, électricité, frottement.
+
+RISQUES:
+- Défaillance circulatoire ou respiratoire
+- Douleur sévère
+- Infection
+- Effets qui se poursuivent après suppression de la cause
+
+SIGNES:
+- Brûlures graves : cloques > moitié paume de main, destruction profonde (aspect noirâtre), localisation (visage, mains, orifices)
+- Brûlures simples : rougeur, cloques < moitié paume de main
+
+CONDUITE A TENIR:
+
+BRÛLURE GRAVE:
+1. Supprimer la cause (éteindre flammes, couper courant)
+2. Refroidir immédiatement à l'eau (10-25°C) pendant 5 minutes sans pression
+3. Retirer vêtements qui n'adhèrent pas
+4. Allonger le brûlé sur région non brûlée
+5. Alerter les secours
+6. Surveiller toutes les 2 minutes
+
+BRÛLURE SIMPLE:
+- Protéger par pansement stérile
+- Ne pas percer les cloques
+- Surveiller comme plaie simple
+- Vérifier vaccination
+
+CAS PARTICULIERS:
+- Produit chimique : retirer vêtements imbibés, arroser abondamment à grande eau
+- Projection dans l'œil : rincer abondamment à l'eau
+- Ingestion : ne pas faire vomir, ne pas donner à boire, garder emballage
+- Brûlure électrique : toujours grave, allonger et surveiller
+- Inhalation de fumée : position demi-assise
+
+3. ATTEINTES TRAUMATIQUES DES OS OU ARTICULATIONS
+
+DEFINITION:
+Atteintes fréquentes résultant d'un coup, chute ou faux mouvement (membres, tête, nuque, dos).
+
+RISQUES:
+Mouvements inappropriés entraînent douleur, complications et séquelles.
+
+SIGNES:
+- Douleur vive
+- Difficulté ou impossibilité de bouger
+- Gonflement et/ou déformation
+
+CONDUITE A TENIR:
+
+DOULEUR DU DOS, DE LA NIQUE, DE LA TETE:
+1. Ne jamais mobiliser la victime
+2. Conseiller de ne faire aucun mouvement de la tête
+3. Alerter les secours
+4. Maintenir la tête avec les deux mains de chaque côté
+5. Surveiller en parlant régulièrement
+
+COUP SUR LA TETE AVEC:
+- Agitation ou prostration
+- Vomissements
+- Maux de tête persistants
+- Amnésie de l'accident
+→ Demander avis médical et surveiller (risque de lésion cérébrale)
+
+TRAUMATISME DE MEMBRE:
+1. Interdire toute mobilisation
+2. Alerter les secours ou demander avis médical
+3. Respecter recommandations des secours
+4. Surveiller en parlant régulièrement
+5. Protéger contre froid/chaleur
+
+ARBRE DE DECISION - VICTIME APRES TRAUMATISME:
+Victime se plaint après un traumatisme
+→ Éviter aggravation
+  - D'une douleur des os/articulations : Ne pas mobiliser
+  - D'une plaie : 
+    Plaie grave? OUI → Position d'attente adaptée / Alerter
+    NON → Nettoyer / Protéger / Vérifier vaccination
+  - D'une brûlure :
+    Brûlure grave? OUI → Allonger / Alerter
+    NON → Protéger / Vérifier vaccination
+  - Douleur du dos/nuque/tête : Maintenir la tête / Alerter
+→ Parler régulièrement / Expliquer
+
+==================================================
+FIN DU DOCUMENT
+==================================================

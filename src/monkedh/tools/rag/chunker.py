@@ -1,38 +1,35 @@
-"""
-Module for processing and chunking documents for RAG.
-"""
-
 from typing import List, Dict, Any
 import re
+import math
 
 
 class DocumentChunker:
     """Handles document loading and chunking."""
-    
+
     def __init__(
         self,
-        chunk_size: int = 1000,
+        chunk_size: int = 500,
         chunk_overlap: int = 200,
-        separator: str = "\n\n"
+        separators: List[str] = ["\n\n", "\n", ". ", " ", ""] # Separators used for recursive splitting
     ):
         """
         Initialize the document chunker.
-        
+
         Args:
-            chunk_size: Maximum size of each chunk in characters
-            chunk_overlap: Number of overlapping characters between chunks
-            separator: Separator to use for splitting text
+            chunk_size: Maximum size of each chunk in characters.
+            chunk_overlap: Number of overlapping characters between chunks.
+            separators: List of separators to use for recursive splitting.
         """
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
-        self.separator = separator
-    
+        self.separators = separators
+
     def load_markdown(self, file_path: str) -> str:
         """
-        Load markdown file content.
+        Load file content.
         
         Args:
-            file_path: Path to the markdown file
+            file_path: Path to the file
             
         Returns:
             File content as string
@@ -40,160 +37,273 @@ class DocumentChunker:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         return content
-    
-    def extract_sections(self, content: str) -> List[Dict[str, Any]]:
+
+    def clean_text(self, text: str) -> str:
         """
-        Extract sections from markdown content based on headers.
-        
-        Args:
-            content: Markdown content
+        Clean text by removing excessive whitespace and special characters.
+        """
+        # Remove multiple spaces
+        text = re.sub(r' +', ' ', text)
+        # Remove multiple newlines
+        text = re.sub(r'\n\n+', '\n\n', text)
+        # Remove leading/trailing whitespace
+        text = text.strip()
+        return text
+
+    def recursive_split_text(self, text: str) -> List[str]:
+        """
+        Recursively splits text using the list of separators until chunks fit size limit.
+        """
+        if not text:
+            return []
             
-        Returns:
-            List of section dictionaries with title and content
-        """
-        sections = []
+        # Base case: If the chunk is small enough, no further splitting is needed
+        if len(text) <= self.chunk_size:
+            return [text]
+
+        # Find the best separator to use
+        best_separator = None
+        for sep in self.separators:
+            if sep in text:
+                best_separator = sep
+                break
         
-        # Split by headers (##, ###, etc.)
-        parts = re.split(r'\n(#{1,3}\s+.+)\n', content)
-        
-        current_section = {
-            "title": "Introduction",
-            "content": "",
-            "level": 0
-        }
-        
-        for i, part in enumerate(parts):
-            if part.startswith('#'):
-                # This is a header
-                if current_section["content"].strip():
-                    sections.append(current_section.copy())
+        # If no separator found, use fixed-size chunking (character split)
+        if best_separator is None:
+            best_separator = "" # Fallback to character-level splitting
+
+        splits = text.split(best_separator)
+        final_chunks = []
+        current_chunk = ""
+
+        for split in splits:
+            # Check if adding the current split exceeds the max size
+            if len(current_chunk) + len(best_separator) + len(split) > self.chunk_size and current_chunk:
+                # The current chunk is ready, but it must include overlap from the previous one.
+                # Since we are iterating through splits, we just append the current_chunk 
+                # and recurse on the split itself if it is still too large.
                 
-                # Count header level
-                level = len(re.match(r'^#+', part).group())
-                title = part.strip('# ').strip()
-                
-                current_section = {
-                    "title": title,
-                    "content": "",
-                    "level": level
-                }
+                # If the split is too large, recurse on it first
+                if len(split) > self.chunk_size:
+                    final_chunks.extend(self.recursive_split_text(split))
+                    continue
+
+                # Add the accumulated chunk (before the new split)
+                final_chunks.append(current_chunk)
+
+                # Set up the next chunk with overlap
+                overlap_text = current_chunk[-(self.chunk_overlap):]
+                current_chunk = overlap_text + best_separator + split
             else:
-                # This is content
-                current_section["content"] += part
+                # Accumulate the split into the current chunk
+                current_chunk += (best_separator + split if current_chunk else split)
+
+        # Add the last accumulated chunk
+        if current_chunk:
+             final_chunks.append(current_chunk)
         
-        # Add the last section
-        if current_section["content"].strip():
-            sections.append(current_section)
-        
-        return sections
-    
+        # Final pass for fixed-size/overlap in case of no good separators
+        if best_separator == "" and final_chunks and len(final_chunks[0]) > self.chunk_size:
+            text_to_chunk = final_chunks[0]
+            start = 0
+            chunks = []
+            while start < len(text_to_chunk):
+                end = start + self.chunk_size
+                chunks.append(text_to_chunk[start:end].strip())
+                start += (self.chunk_size - self.chunk_overlap)
+            return chunks
+
+        return [chunk.strip() for chunk in final_chunks if chunk.strip()]
+
+
     def chunk_text(self, text: str) -> List[str]:
         """
-        Split text into chunks with overlap.
+        Split text into chunks using recursive splitting with overlap.
         
         Args:
             text: Text to chunk
             
         Returns:
-            List of text chunks
+            List of text chunks, respecting chunk_size and chunk_overlap
         """
-        # Clean up the text
-        text = text.strip()
-        
-        if not text:
-            return []
-        
-        if len(text) <= self.chunk_size:
-            return [text]
-        
-        chunks = []
-        start = 0
-        text_len = len(text)
-        
-        while start < text_len:
-            # Find the end of this chunk
-            end = min(start + self.chunk_size, text_len)
-            
-            # If we're not at the end, try to break at a sentence or paragraph
-            if end < text_len:
-                # Look for paragraph break
-                break_pos = text.rfind('\n\n', start, end)
-                if break_pos == -1:
-                    # Look for sentence end
-                    break_pos = text.rfind('. ', start, end)
-                if break_pos == -1:
-                    # Look for any space
-                    break_pos = text.rfind(' ', start, end)
-                if break_pos != -1 and break_pos > start:
-                    end = break_pos + 1
-            
-            chunk = text[start:end].strip()
-            if chunk:
-                chunks.append(chunk)
-            
-            # Move start position with overlap, ensuring we make progress
-            start = max(start + 1, end - self.chunk_overlap)
-            
-            # Safety check to prevent infinite loop
-            if start >= text_len:
-                break
-        
-        return chunks
+        # The main entry point calls the recursive splitter
+        return self.recursive_split_text(text)
+
+    def extract_sections(self, content: str) -> List[Dict[str, Any]]:
+        """
+        Extract Markdown sections from content (based on # headings).
+        (Implementation for the missing method)
+        """
+        sections = []
+        heading_pattern = re.compile(r'(^#{1,6}\s+.*)', re.MULTILINE)
+        splits = re.split(heading_pattern, content)
+
+        current_content = splits[0].strip() if splits else ""
+
+        if current_content:
+             sections.append({
+                "title": "Document Start (No Header)",
+                "content": current_content,
+                "level": 0,
+                "source_type": "markdown"
+            })
+
+        for i in range(1, len(splits), 2):
+            if i + 1 < len(splits):
+                heading = splits[i].strip()
+                content = splits[i+1].strip()
+
+                match = re.match(r'(#+)\s+(.*)', heading)
+                level = len(match.group(1)) if match else 1
+                title = match.group(2).strip() if match else heading
+
+                sections.append({
+                    "title": title,
+                    "content": content,
+                    "level": level,
+                    "source_type": "markdown"
+                })
+
+        return sections
     
+    def extract_rt_sections(self, content: str) -> List[Dict[str, Any]]:
+        """
+        Extract RT sections from the first aid manual text format.
+        (Original method, with added metadata)
+        """
+        sections = []
+        
+        # Split by section separators (handle file start)
+        parts = re.split(r'(?:^|\n)={50,}(?:\n|$)', content)
+        
+        for i, part in enumerate(parts):
+            part = part.strip()
+            if not part:
+                continue
+            
+            lines = part.split('\n')
+            if not lines:
+                continue
+            
+            first_line = lines[0].strip()
+            
+            # Handle non-RT intro section
+            if not first_line.startswith('RT') and i == 0:
+                 sections.append({
+                    "title": "Document Introduction",
+                    "rt_id": "N/A",
+                    "numero_rt": 0,
+                    "content": part,
+                    "subsections": {},
+                    "level": 0,
+                    "source_type": "rt_manual"
+                })
+                
+            
+            rt_match = re.match(r'RT(\d+):\s*(.+)', first_line)
+            if not rt_match:
+                continue
+            
+            rt_number = int(rt_match.group(1))
+            rt_title = rt_match.group(2).strip()
+            
+            content_lines = lines[1:]
+            
+            # Parse subsections
+            subsections = {}
+            current_subsection = None
+            current_content = []
+            
+            for line in content_lines:
+                line = line.strip()
+                if not line:
+                    continue
+                
+                if re.match(r'^[A-Z\s]+:$', line) and len(line) > 3:
+                    if current_subsection and current_content:
+                        subsections[current_subsection] = '\n'.join(current_content).strip()
+                    
+                    current_subsection = line[:-1].lower().replace(' ', '_')
+                    current_content = []
+                else:
+                    if current_subsection:
+                        current_content.append(line)
+            
+            if current_subsection and current_content:
+                subsections[current_subsection] = '\n'.join(current_content).strip()
+            
+            sections.append({
+                "title": rt_title,
+                "rt_id": f"RT{rt_number}",
+                "numero_rt": rt_number,
+                "content": part,
+                "subsections": subsections,
+                "level": 1,
+                "source_type": "rt_manual"
+            })
+        return sections
+
     def process_document(
         self,
         file_path: str,
-        chunk_by_section: bool = True
+        chunk_by_section: bool = True,
+        format: str = "auto"
     ) -> List[Dict[str, Any]]:
         """
-        Process a markdown document into chunks with metadata.
-        
-        Args:
-            file_path: Path to the markdown file
-            chunk_by_section: If True, respect section boundaries
-            
-        Returns:
-            List of chunks with metadata
+        Process a document into chunks with metadata.
         """
-        print(f"Loading document from: {file_path}")
         content = self.load_markdown(file_path)
-        print(f"Document loaded: {len(content)} characters")
+        # Improvement: Clean text immediately after loading
+        content = self.clean_text(content)
         
+        if format == "auto":
+            if "==================================================" in content and "RT" in content:
+                format = "rt_manual"
+            else:
+                format = "markdown"
+
         if chunk_by_section:
-            print("Extracting sections...")
-            sections = self.extract_sections(content)
-            print(f"Found {len(sections)} sections")
+            if format == "rt_manual":
+                sections = self.extract_rt_sections(content)
+            else:
+                # Fixed: Use the implemented markdown extractor
+                sections = self.extract_sections(content)
             
             chunks = []
             
-            for idx, section in enumerate(sections):
-                print(f"Processing section {idx+1}/{len(sections)}: {section['title'][:50]}...")
-                
-                # Skip empty sections
-                if not section["content"].strip():
+            for section in sections:
+                if not section.get("content") or not section["content"].strip():
                     continue
                 
                 try:
+                    # Fixed: Use the new recursive chunker which respects size and overlap
                     section_chunks = self.chunk_text(section["content"])
-                    print(f"  Created {len(section_chunks)} chunks")
                     
                     for chunk_idx, chunk in enumerate(section_chunks):
+                        metadata = {
+                            "section_title": section["title"],
+                            "chunk_index": chunk_idx,
+                            "total_chunks": len(section_chunks),
+                            "source": file_path,
+                            "level": section.get("level", 1)
+                        }
+                        
+                        if "rt_id" in section and section["source_type"] == "rt_manual":
+                            metadata.update({
+                                "rt_id": section["rt_id"],
+                                "numero_rt": section["numero_rt"]
+                            })
+                        
                         chunks.append({
                             "text": chunk,
-                            "metadata": {
-                                "section_title": section["title"],
-                                "section_level": section["level"],
-                                "chunk_index": chunk_idx,
-                                "total_chunks": len(section_chunks),
-                                "source": file_path
-                            }
+                            "metadata": metadata
                         })
                 except Exception as e:
+                    # In a production setting, use proper logging
                     print(f"  Warning: Error processing section '{section['title']}': {e}")
                     continue
         else:
             # Simple chunking without section awareness
-            print("Chunking document without section awareness...")
             text_chunks = self.chunk_text(content)
             chunks = [
                 {
@@ -201,32 +311,11 @@ class DocumentChunker:
                     "metadata": {
                         "chunk_index": idx,
                         "total_chunks": len(text_chunks),
-                        "source": file_path
+                        "source": file_path,
+                        "level": 0
                     }
                 }
                 for idx, chunk in enumerate(text_chunks)
             ]
         
-        print(f"Total chunks created: {len(chunks)}")
         return chunks
-    
-    def clean_text(self, text: str) -> str:
-        """
-        Clean text by removing excessive whitespace and special characters.
-        
-        Args:
-            text: Text to clean
-            
-        Returns:
-            Cleaned text
-        """
-        # Remove multiple spaces
-        text = re.sub(r' +', ' ', text)
-        
-        # Remove multiple newlines
-        text = re.sub(r'\n\n+', '\n\n', text)
-        
-        # Remove leading/trailing whitespace
-        text = text.strip()
-        
-        return text

@@ -10,11 +10,10 @@ from crewai.memory.short_term.short_term_memory import ShortTermMemory
 import dotenv
 from monkedh.tools.rag import create_first_aid_search_tool
 from monkedh.tools.rag.config import QDRANT_URL, QDRANT_API_KEY
+from .tools.samu_notification_tool import SAMUNotificationTool
+from .tools.image_suggestion import search_emergency_image
 
-rag_tool = create_first_aid_search_tool(
-    qdrant_url=QDRANT_URL,
-    qdrant_api_key=QDRANT_API_KEY
-)
+
 dotenv.load_dotenv()
 
 # Disable SSL warnings for TokenFactory
@@ -39,8 +38,6 @@ llm = LLM(
     base_url=os.getenv('AZURE_API_BASE'),
     api_version=os.getenv("AZURE_API_VERSION"),
     stream=False,
-    reasoning_effort="high",
-    temperature=0.0
 )
 
 # TokenFactory LLM (Llama-3.1-70B) - without http_client
@@ -51,6 +48,7 @@ llm_tokenfactory = LLM(
     temperature=0.1,
     top_p=0.9
 )
+
 @CrewBase
 class Monkedh():
     """Monkedh crew"""
@@ -59,12 +57,17 @@ class Monkedh():
     tasks: List[Task]
     
     serper_tool = SerperDevTool(
-        country="tn",
-        locale="tn",
-        n_results=1,
+        country="fr",
+        locale="fr",
+        n_results=2,
     )
     webscraper_tool = ScrapeWebsiteTool()
-
+    rag_tool = create_first_aid_search_tool(
+    qdrant_url=QDRANT_URL,
+    qdrant_api_key=QDRANT_API_KEY
+    )
+    image_tool = search_emergency_image
+    
     # ============================================
     # AGENT 1 : COLLECTEUR DE DONNÉES MÉDICALES
     # ============================================
@@ -72,24 +75,40 @@ class Monkedh():
     def guideur_urgence_samu(self) -> Agent:
         return Agent(
             config=self.agents_config['guideur_urgence_samu'],
-            tools=[rag_tool],
+            tools=[self.rag_tool, self.serper_tool, self.webscraper_tool, self.image_tool],
+            llm=llm,
+            max_iter=3,
+            cache=False,
+            verbose=False,
+        )
+    @agent
+    def notificateur_samu(self) -> Agent:
+        return Agent(
+            config=self.agents_config['notificateur_samu'],
+            tools=[SAMUNotificationTool()],
             llm=llm,
             max_iter=1,
-            cache=True,
-            verbose=False
+            cache=False,
+            verbose=True,
         )
-
     
 
     # ============================================
     # TÂCHES DE L'AGENT COLLECTEUR
     # ============================================
     @task
+    def creation_notification_urgence(self) -> Task:
+        return Task(
+            config=self.tasks_config['creation_notification_urgence'],
+            output_file='notification.json'
+        )
+    @task
     def guidage_urgence_temps_reel(self) -> Task:
         return Task(
             config=self.tasks_config['guidage_urgence_temps_reel'],
             output_file='protocols_urgences.json'
         )
+   
 
     @crew
     def crew(self) -> Crew:
@@ -108,7 +127,8 @@ class Monkedh():
             tasks=self.tasks, # Automatically created by the @task decorator
             process=Process.sequential,
             short_term_memory=short_term_memory,
-            verbose=False,
-            cache=True,
-            # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
+            function_calling_llm=llm,
+            verbose=True,
+            output_log_file="monkedh_crew.log",
+            cache=False,
         )

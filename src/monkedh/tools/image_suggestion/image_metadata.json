@@ -1,0 +1,164 @@
+{
+  "images": [
+    {
+      "filename": "emergency_image_db/CPR – Adult casualty/adult_cpr_chest_compressions.png",
+      "category": "RCP",
+      "subcategory": "Adulte",
+      "caption": "Comment faire un massage cardiaque sur un adulte - positionnement des mains au centre de la poitrine, bras tendus, 30 compressions",
+      "caption_en": "How to do CPR on adult - chest compressions hand positioning on center of chest, arms straight, compress 30 times",
+      "keywords": ["adulte", "rcp", "massage cardiaque", "compressions thoraciques", "arrêt cardiaque", "réanimation", "urgence", "adult", "cpr", "chest compressions", "cardiac arrest", "resuscitation"]
+    },
+    {
+      "filename": "emergency_image_db/CPR – Adult casualty/adult_cpr_rescue_breathing.png",
+      "category": "RCP",
+      "subcategory": "Adulte",
+      "caption": "Technique de bouche-à-bouche RCP - bascule de la tête, soulèvement du menton, pincer le nez, donner 2 insufflations",
+      "caption_en": "CPR rescue breathing technique - head tilt chin lift airway opening, pinch nose closed, give 2 rescue breaths mouth to mouth",
+      "keywords": ["adulte", "rcp", "bouche à bouche", "insufflation", "voies aériennes", "ventilation", "adult", "cpr", "rescue breathing", "mouth to mouth", "airway"]
+    },
+    {
+      "filename": "emergency_image_db/CPR – Infant casualty/infant_cpr_two_finger.png",
+      "category": "RCP",
+      "subcategory": "Nourrisson",
+      "caption": "Comment faire un massage cardiaque sur un bébé - technique à deux doigts sur le sternum, compressions douces pour nourrissons",
+      "caption_en": "How to do CPR on baby infant - two finger chest compressions technique on sternum, gentle compressions for infants",
+      "keywords": ["nourrisson", "bébé", "rcp", "massage cardiaque", "pédiatrique", "nouveau-né", "enfant", "infant", "baby", "cpr", "chest compressions", "pediatric"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/adult_heimlich_abdominal_thrusts.png",
+      "category": "Étouffement",
+      "subcategory": "Adulte",
+      "caption": "Manœuvre de Heimlich pour adulte qui s'étouffe - poussées abdominales par derrière, poing au-dessus du nombril",
+      "caption_en": "Heimlich maneuver for choking adult - abdominal thrusts from behind, fist above navel",
+      "keywords": ["étouffement", "heimlich", "poussée abdominale", "obstruction voies aériennes", "adulte", "urgence", "choking", "abdominal thrust", "airway obstruction", "adult"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/adult_choking_back_blows.png",
+      "category": "Étouffement",
+      "subcategory": "Adulte - claques dorsales",
+      "caption": "Claques dans le dos pour étouffement - pencher la personne en avant, frapper entre les omoplates avec le talon de la main",
+      "caption_en": "Back blows for choking - bend person forward, strike between shoulder blades with heel of hand",
+      "keywords": ["étouffement", "claques dorsales", "tapes dans le dos", "obstruction", "premiers secours", "choking", "back blows", "back slaps", "airway obstruction"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/infant_choking_back_blows.png",
+      "category": "Étouffement",
+      "subcategory": "Nourrisson",
+      "caption": "Claques dorsales pour bébé qui s'étouffe - tenir le bébé tête en bas sur l'avant-bras, taper entre les omoplates",
+      "caption_en": "Infant choking back blows - hold baby face down on forearm, give back blows between shoulder blades",
+      "keywords": ["nourrisson", "bébé", "étouffement", "claques dorsales", "pédiatrique", "obstruction", "infant", "baby", "choking", "back blows", "pediatric"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/infant_choking_chest_thrusts.png",
+      "category": "Étouffement",
+      "subcategory": "Nourrisson",
+      "caption": "Compressions thoraciques pour bébé qui s'étouffe - retourner le bébé sur le dos, compressions à deux doigts sous la ligne des mamelons",
+      "caption_en": "Infant choking chest thrusts - turn baby face up, two finger chest compressions below nipple line",
+      "keywords": ["nourrisson", "bébé", "étouffement", "compressions thoraciques", "pédiatrique", "infant", "baby", "choking", "chest thrusts", "pediatric"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/infant_choking_sequence.png",
+      "category": "Étouffement",
+      "subcategory": "Nourrisson - séquence",
+      "caption": "Séquence complète étouffement bébé - alterner 5 claques dorsales et 5 compressions thoraciques jusqu'à expulsion de l'objet",
+      "caption_en": "Complete infant choking sequence - alternate 5 back blows and 5 chest thrusts until object dislodges",
+      "keywords": ["nourrisson", "bébé", "étouffement", "séquence", "claques dorsales", "compressions thoraciques", "infant", "baby", "choking", "sequence"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/pregnant_woman_chest_thrusts.png",
+      "category": "Étouffement",
+      "subcategory": "Femme enceinte",
+      "caption": "Manœuvre de Heimlich pour femme enceinte - compressions thoraciques au lieu d'abdominales, mains sur le sternum",
+      "caption_en": "Heimlich for pregnant woman - chest thrusts instead of abdominal thrusts, hands on sternum",
+      "keywords": ["enceinte", "grossesse", "étouffement", "compressions thoraciques", "femme enceinte", "urgence", "pregnant", "choking", "chest thrusts", "pregnancy"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for choking/pregnant_woman_modified_heimlich.png",
+      "category": "Étouffement",
+      "subcategory": "Femme enceinte",
+      "caption": "Technique modifiée pour femme enceinte qui s'étouffe - placer les mains plus haut sur la poitrine, éviter l'abdomen",
+      "caption_en": "Modified choking technique for pregnant woman - position hands higher on chest, avoid abdomen",
+      "keywords": ["enceinte", "grossesse", "étouffement", "compressions", "maternité", "urgence", "pregnant", "choking", "chest compressions", "pregnancy", "maternal"]
+    },
+    {
+      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step1_assess.png",
+      "category": "Positionnement",
+      "subcategory": "Retournement",
+      "caption": "Étape 1 : Évaluer la personne inconsciente à plat ventre, vérifier la respiration et les blessures",
+      "caption_en": "Step 1: Assess unconscious person lying face down, check for breathing and injuries",
+      "keywords": ["inconscient", "positionnement", "face contre terre", "retournement", "précautions spinales", "unconscious", "positioning", "face down", "log roll"]
+    },
+    {
+      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step2_position_arm.png",
+      "category": "Positionnement",
+      "subcategory": "Retournement",
+      "caption": "Étape 2 : S'agenouiller à côté de la victime, étendre son bras au-dessus de la tête, protéger tête et cou",
+      "caption_en": "Step 2: Kneel beside casualty, straighten their arm above head, protect head and neck",
+      "keywords": ["retournement", "positionnement", "protection spinale", "tournage", "inconscient", "log roll", "positioning", "spinal protection"]
+    },
+    {
+      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step3_roll_casualty.png",
+      "category": "Positionnement",
+      "subcategory": "Retournement",
+      "caption": "Étape 3 : Retourner la victime d'un seul bloc sur le dos, en maintenant l'alignement tête-colonne",
+      "caption_en": "Step 3: Roll casualty as single unit onto their back, supporting head and spine alignment",
+      "keywords": ["retournement", "tournage", "alignement spinal", "secours", "positionnement", "log roll", "turning", "spinal alignment"]
+    },
+    {
+      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step4_check_abc.png",
+      "category": "Positionnement",
+      "subcategory": "Retournement",
+      "caption": "Étape 4 : Positionner la victime à plat sur le dos, vérifier voies aériennes, respiration, circulation",
+      "caption_en": "Step 4: Position casualty flat on back, check airway breathing circulation",
+      "keywords": ["position dorsale", "vérification abc", "voies aériennes", "respiration", "circulation", "supine position", "abc check", "airway", "breathing"]
+    },
+    {
+      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step5_final_position.png",
+      "category": "Positionnement",
+      "subcategory": "Retournement terminé",
+      "caption": "Étape 5 : Position finale - victime sur le dos, prête pour RCP ou PLS si elle respire",
+      "caption_en": "Step 5: Final position - casualty on back, ready for CPR or recovery position if breathing",
+      "keywords": ["positionnement terminé", "prêt pour rcp", "sur le dos", "réponse urgence", "positioning complete", "ready for cpr", "supine"]
+    },
+    {
+      "filename": "emergency_image_db/Recovery Position/recovery_step1_arm_position.png",
+      "category": "Position Latérale de Sécurité",
+      "subcategory": "Préparation",
+      "caption": "PLS étape 1 : Placer le bras le plus proche à angle droit, paume vers le haut",
+      "caption_en": "Recovery position step 1: Place arm nearest you at right angle, palm up",
+      "keywords": ["pls", "position latérale", "inconscient respire", "position sécurité", "voies aériennes", "recovery position", "unconscious breathing", "lateral position"]
+    },
+    {
+      "filename": "emergency_image_db/Recovery Position/recovery_step2_cross_arm.png",
+      "category": "Position Latérale de Sécurité",
+      "subcategory": "Préparation",
+      "caption": "PLS étape 2 : Amener le bras opposé sur la poitrine, maintenir le dos de la main contre la joue",
+      "caption_en": "Recovery position step 2: Bring far arm across chest, hold back of hand against near cheek",
+      "keywords": ["pls", "positionnement", "inconscient", "latéral", "protection voies aériennes", "recovery position", "positioning", "airway protection"]
+    },
+    {
+      "filename": "emergency_image_db/Recovery Position/recovery_step3_bend_knee_roll.png",
+      "category": "Position Latérale de Sécurité",
+      "subcategory": "Retournement",
+      "caption": "PLS étape 3 : Plier le genou opposé, tirer le genou vers soi pour faire rouler la victime sur le côté",
+      "caption_en": "Recovery position step 3: Bend far knee up, pull knee toward you to roll casualty onto side",
+      "keywords": ["pls", "retournement", "position latérale", "inconscient respire", "recovery position", "rolling", "lateral position"]
+    },
+    {
+      "filename": "emergency_image_db/Recovery Position/recovery_step4_adjust_leg.png",
+      "category": "Position Latérale de Sécurité",
+      "subcategory": "Ajustement",
+      "caption": "PLS étape 4 : Ajuster la jambe supérieure pour que hanche et genou soient à angle droit, position stable",
+      "caption_en": "Recovery position step 4: Adjust top leg so hip and knee bent at right angles for stability",
+      "keywords": ["pls", "position stable", "sur le côté", "inconscient", "maintien voies aériennes", "recovery position", "stable side position", "airway maintenance"]
+    },
+    {
+      "filename": "emergency_image_db/Recovery Position/recovery_step5_tilt_head_airway.png",
+      "category": "Position Latérale de Sécurité",
+      "subcategory": "Final",
+      "caption": "PLS finale : Basculer la tête en arrière pour garder les voies aériennes ouvertes, surveiller la respiration en continu",
+      "caption_en": "Recovery position final: Tilt head back to keep airway open, monitor breathing continuously",
+      "keywords": ["pls", "voies aériennes ouvertes", "surveillance respiration", "inconscient stable", "recovery position", "airway open", "breathing monitoring"]
+    }
+  ]
+}
