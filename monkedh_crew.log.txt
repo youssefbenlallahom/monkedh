@@ -29565,3 +29565,571 @@ Cette image montre : Comment déplacer une victime en toute sécurité par la 
 En Tunisie, composez le 190 (SAMU) pour toute urgence vitale : n’essayez jamais de transporter seul une victime si les secours sont accessibles. Attendez leur arrivée quand c’est possible.
 
 C’est clair pour vous ? Besoin de conseils adaptés à la situation (enfant, femme enceinte, trauma spécifique) ?"
+2025-12-02 21:45:41: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: un homme est inconscient mais respire + Aucun historique précédent. C'est le début de la conversation.
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="started"
+2025-12-02 21:45:51: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: un homme est inconscient mais respire + Aucun historique précédent. C'est le début de la conversation.
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="completed", output="{
+  "status": "SENT",
+  "timestamp": "2024-06-10T11:38:00Z",
+  "priority": "CRITICAL",
+  "samu_code": "190-TUN",
+  "data_summary": "Homme inconscient mais respire, aucun antécédent ni information d'identité, localisation ou contact fournis."
+}"
+2025-12-02 21:45:51: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: un homme est inconscient mais respire
+HISTORIQUE: Aucun historique précédent. C'est le début de la conversation.
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="started"
+2025-12-02 21:46:16: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: un homme est inconscient mais respire
+HISTORIQUE: Aucun historique précédent. C'est le début de la conversation.
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="completed", output="⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement."
+2025-12-02 21:47:14: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: en attendant le samu , en quelle position doit-je le mettre? + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="started"
+2025-12-02 21:47:24: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: en attendant le samu , en quelle position doit-je le mettre? + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="completed", output="{
+  "status": "SENT",
+  "timestamp": "2024-06-11T17:18:42Z",
+  "priority": "CRITICAL",
+  "samu_code": "190-TUN",
+  "data_summary": "Homme inconscient mais respire, témoin guidé pour mise en position latérale de sécurité en attendant l'arrivée du SAMU. Localisation, identité et contact inconnu."
+}"
+2025-12-02 21:47:24: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: en attendant le samu , en quelle position doit-je le mettre?
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="started"
+2025-12-02 21:47:29: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: en attendant le samu , en quelle position doit-je le mettre?
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="completed", output="⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie."
