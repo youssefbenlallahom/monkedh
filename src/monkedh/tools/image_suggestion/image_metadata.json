@@ -1,6 +1,22 @@
 {
   "images": [
     {
+      "filename": "emergency_image_db/drag carry.png",
+      "category": "Déplacement",
+      "subcategory": "Transport victime",
+      "caption": "Comment déplacer une victime en toute sécurité - technique de traînée par les épaules, soutenir la tête et le cou, déplacer vers un endroit sûr",
+      "caption_en": "How to safely move a casualty - drag carry technique by shoulders, support head and neck, move to safe location",
+      "keywords": ["déplacement", "transport", "traînée", "victime", "épaules", "sécurité", "évacuation", "porter", "drag", "carry", "move casualty", "shoulders", "evacuation", "transport victim", "safe movement"]
+    },
+    {
+      "filename": "emergency_image_db/First aid for unconsciousness.png",
+      "category": "Évaluation",
+      "subcategory": "Bilan primaire",
+      "caption": "Bilan primaire pour personne inconsciente - vérifier les voies aériennes, bascule de la tête, soulèvement du menton, écouter la respiration",
+      "caption_en": "Primary survey for unconscious person - check airway, head tilt chin lift, listen for breathing",
+      "keywords": ["inconscient", "bilan primaire", "voies aériennes", "respiration", "évaluation", "tête basculée", "menton soulevé", "vérification", "unconscious", "primary survey", "airway", "breathing", "assessment", "head tilt", "chin lift", "check breathing", "ABC"]
+    },
+    {
       "filename": "emergency_image_db/CPR – Adult casualty/adult_cpr_chest_compressions.png",
       "category": "RCP",
       "subcategory": "Adulte",
@@ -81,84 +97,20 @@
       "keywords": ["enceinte", "grossesse", "étouffement", "compressions", "maternité", "urgence", "pregnant", "choking", "chest compressions", "pregnancy", "maternal"]
     },
     {
-      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step1_assess.png",
+      "filename": "emergency_image_db/How to turn a casualty face up/turn_casualty_face_up_complete.png",
       "category": "Positionnement",
       "subcategory": "Retournement",
-      "caption": "Étape 1 : Évaluer la personne inconsciente à plat ventre, vérifier la respiration et les blessures",
-      "caption_en": "Step 1: Assess unconscious person lying face down, check for breathing and injuries",
-      "keywords": ["inconscient", "positionnement", "face contre terre", "retournement", "précautions spinales", "unconscious", "positioning", "face down", "log roll"]
+      "caption": "Comment retourner une victime sur le dos - Guide complet en 5 étapes : 1) Évaluer la victime, 2) Positionner le bras au-dessus de la tête, 3) Retourner d'un bloc en protégeant la colonne, 4) Vérifier voies aériennes/respiration/circulation, 5) Position finale prête pour RCP ou PLS",
+      "caption_en": "How to turn a casualty face up - Complete 5-step guide: 1) Assess casualty, 2) Position arm above head, 3) Log roll while protecting spine, 4) Check airway/breathing/circulation, 5) Final position ready for CPR or recovery position",
+      "keywords": ["inconscient", "positionnement", "retournement", "log roll", "face contre terre", "précautions spinales", "tournage", "alignement spinal", "vérification abc", "voies aériennes", "respiration", "circulation", "prêt pour rcp", "unconscious", "positioning", "face down", "spinal protection", "turning", "abc check", "airway", "breathing", "ready for cpr"]
     },
     {
-      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step2_position_arm.png",
-      "category": "Positionnement",
-      "subcategory": "Retournement",
-      "caption": "Étape 2 : S'agenouiller à côté de la victime, étendre son bras au-dessus de la tête, protéger tête et cou",
-      "caption_en": "Step 2: Kneel beside casualty, straighten their arm above head, protect head and neck",
-      "keywords": ["retournement", "positionnement", "protection spinale", "tournage", "inconscient", "log roll", "positioning", "spinal protection"]
-    },
-    {
-      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step3_roll_casualty.png",
-      "category": "Positionnement",
-      "subcategory": "Retournement",
-      "caption": "Étape 3 : Retourner la victime d'un seul bloc sur le dos, en maintenant l'alignement tête-colonne",
-      "caption_en": "Step 3: Roll casualty as single unit onto their back, supporting head and spine alignment",
-      "keywords": ["retournement", "tournage", "alignement spinal", "secours", "positionnement", "log roll", "turning", "spinal alignment"]
-    },
-    {
-      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step4_check_abc.png",
-      "category": "Positionnement",
-      "subcategory": "Retournement",
-      "caption": "Étape 4 : Positionner la victime à plat sur le dos, vérifier voies aériennes, respiration, circulation",
-      "caption_en": "Step 4: Position casualty flat on back, check airway breathing circulation",
-      "keywords": ["position dorsale", "vérification abc", "voies aériennes", "respiration", "circulation", "supine position", "abc check", "airway", "breathing"]
-    },
-    {
-      "filename": "emergency_image_db/How to turn a casualty face up/log_roll_step5_final_position.png",
-      "category": "Positionnement",
-      "subcategory": "Retournement terminé",
-      "caption": "Étape 5 : Position finale - victime sur le dos, prête pour RCP ou PLS si elle respire",
-      "caption_en": "Step 5: Final position - casualty on back, ready for CPR or recovery position if breathing",
-      "keywords": ["positionnement terminé", "prêt pour rcp", "sur le dos", "réponse urgence", "positioning complete", "ready for cpr", "supine"]
-    },
-    {
-      "filename": "emergency_image_db/Recovery Position/recovery_step1_arm_position.png",
+      "filename": "emergency_image_db/Recovery Position/recovery_position_complete.png",
       "category": "Position Latérale de Sécurité",
-      "subcategory": "Préparation",
-      "caption": "PLS étape 1 : Placer le bras le plus proche à angle droit, paume vers le haut",
-      "caption_en": "Recovery position step 1: Place arm nearest you at right angle, palm up",
-      "keywords": ["pls", "position latérale", "inconscient respire", "position sécurité", "voies aériennes", "recovery position", "unconscious breathing", "lateral position"]
-    },
-    {
-      "filename": "emergency_image_db/Recovery Position/recovery_step2_cross_arm.png",
-      "category": "Position Latérale de Sécurité",
-      "subcategory": "Préparation",
-      "caption": "PLS étape 2 : Amener le bras opposé sur la poitrine, maintenir le dos de la main contre la joue",
-      "caption_en": "Recovery position step 2: Bring far arm across chest, hold back of hand against near cheek",
-      "keywords": ["pls", "positionnement", "inconscient", "latéral", "protection voies aériennes", "recovery position", "positioning", "airway protection"]
-    },
-    {
-      "filename": "emergency_image_db/Recovery Position/recovery_step3_bend_knee_roll.png",
-      "category": "Position Latérale de Sécurité",
-      "subcategory": "Retournement",
-      "caption": "PLS étape 3 : Plier le genou opposé, tirer le genou vers soi pour faire rouler la victime sur le côté",
-      "caption_en": "Recovery position step 3: Bend far knee up, pull knee toward you to roll casualty onto side",
-      "keywords": ["pls", "retournement", "position latérale", "inconscient respire", "recovery position", "rolling", "lateral position"]
-    },
-    {
-      "filename": "emergency_image_db/Recovery Position/recovery_step4_adjust_leg.png",
-      "category": "Position Latérale de Sécurité",
-      "subcategory": "Ajustement",
-      "caption": "PLS étape 4 : Ajuster la jambe supérieure pour que hanche et genou soient à angle droit, position stable",
-      "caption_en": "Recovery position step 4: Adjust top leg so hip and knee bent at right angles for stability",
-      "keywords": ["pls", "position stable", "sur le côté", "inconscient", "maintien voies aériennes", "recovery position", "stable side position", "airway maintenance"]
-    },
-    {
-      "filename": "emergency_image_db/Recovery Position/recovery_step5_tilt_head_airway.png",
-      "category": "Position Latérale de Sécurité",
-      "subcategory": "Final",
-      "caption": "PLS finale : Basculer la tête en arrière pour garder les voies aériennes ouvertes, surveiller la respiration en continu",
-      "caption_en": "Recovery position final: Tilt head back to keep airway open, monitor breathing continuously",
-      "keywords": ["pls", "voies aériennes ouvertes", "surveillance respiration", "inconscient stable", "recovery position", "airway open", "breathing monitoring"]
+      "subcategory": "Guide complet",
+      "caption": "Position Latérale de Sécurité (PLS) - Guide complet en 5 étapes : 1) Placer le bras le plus proche à angle droit, 2) Amener le bras opposé sur la poitrine contre la joue, 3) Plier le genou et faire rouler la victime sur le côté, 4) Ajuster la jambe pour stabilité, 5) Basculer la tête en arrière et couvrir avec une couverture, surveiller la respiration",
+      "caption_en": "Recovery Position - Complete 5-step guide: 1) Place nearest arm at right angle, 2) Bring far arm across chest against cheek, 3) Bend knee and roll casualty onto side, 4) Adjust leg for stability, 5) Tilt head back and cover with blanket, monitor breathing",
+      "keywords": ["pls", "position latérale", "position latérale de sécurité", "inconscient respire", "position sécurité", "voies aériennes", "retournement", "position stable", "sur le côté", "maintien voies aériennes", "surveillance respiration", "couverture", "recovery position", "unconscious breathing", "lateral position", "positioning", "airway protection", "rolling", "stable side position", "airway maintenance", "airway open", "breathing monitoring", "blanket"]
     }
   ]
 }

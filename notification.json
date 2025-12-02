@@ -1,7 +1,7 @@
 {
   "status": "SENT",
-  "timestamp": "2024-06-05T11:37:14Z",
+  "timestamp": "2024-06-13T10:43:00Z",
   "priority": "CRITICAL",
   "samu_code": "190-TUN",
-  "data_summary": "Alerte vitale : bébé inconscient, respiration absente ou anormale, gestes de réanimation initiés, identité et localisation inconnues."
+  "data_summary": "[TRANSPORT URGENCE – Homme inconscient, ne respire plus, RCP en cours, demande de transport médicalisé immédiat. Pas d’identité/localisation/contact connus. Situation critique.]"
 }

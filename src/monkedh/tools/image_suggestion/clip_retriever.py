@@ -32,6 +32,7 @@ class EmergencyImageRetriever:
         
         self.embeddings_path = str(embeddings_path)
         self.image_embeddings = None
+        self.valid_indices = []  # Track which metadata indices have valid embeddings
         
         # Try to load pre-computed embeddings
         if os.path.exists(self.embeddings_path):
@@ -44,6 +45,7 @@ class EmergencyImageRetriever:
     def _compute_embeddings(self):
         """Compute CLIP embeddings for all images in metadata"""
         embeddings_list = []
+        self.valid_indices = []  # Track which metadata entries have valid embeddings
         
         for idx, img_data in enumerate(self.metadata):
             img_path = img_data['filename']
@@ -63,23 +65,31 @@ class EmergencyImageRetriever:
                     embedding = embedding / embedding.norm(dim=-1, keepdim=True)  # Normalize
                 
                 embeddings_list.append(embedding.cpu().numpy())
-                print(f"✅ Embedding {idx+1}/{len(self.metadata)}: {os.path.basename(img_path)}")
+                self.valid_indices.append(idx)  # Track this as a valid embedding
+                print(f"✅ Embedding {len(embeddings_list)}/{len(self.metadata)}: {os.path.basename(img_path)}")
                 
             except Exception as e:
                 print(f"❌ Erreur embedding {img_path}: {e}")
-                embeddings_list.append(np.zeros((1, 512)))  # Placeholder
         
         # Stack all embeddings
         self.image_embeddings = np.vstack(embeddings_list)
         
-        # Save embeddings
-        np.savez(self.embeddings_path, embeddings=self.image_embeddings)
-        print(f"💾 Embeddings sauvegardés dans {self.embeddings_path}")
+        # Save embeddings and valid indices
+        np.savez(self.embeddings_path, embeddings=self.image_embeddings, valid_indices=np.array(self.valid_indices))
+        print(f"💾 Embeddings sauvegardés dans {self.embeddings_path} ({len(self.valid_indices)} images)")
     
     def _load_embeddings(self):
         """Load pre-computed embeddings from disk"""
         data = np.load(self.embeddings_path)
         self.image_embeddings = data['embeddings']
+        
+        # Load valid indices if available, otherwise assume all are valid (backwards compatibility)
+        if 'valid_indices' in data:
+            self.valid_indices = data['valid_indices'].tolist()
+        else:
+            # Old format: assume all metadata has embeddings (may cause issues)
+            self.valid_indices = list(range(len(self.image_embeddings)))
+        
         print(f"✅ {len(self.image_embeddings)} embeddings chargés")
     
     def retrieve(self, query, top_k=3):
@@ -123,9 +133,10 @@ class EmergencyImageRetriever:
         # Compute cosine similarities
         similarities = (self.image_embeddings @ query_embedding.T).squeeze()
         
-        # Apply keyword boosting
+        # Apply keyword boosting - iterate over VALID indices only
         boosted_similarities = similarities.copy()
-        for idx, img_meta in enumerate(self.metadata):
+        for emb_idx, metadata_idx in enumerate(self.valid_indices):
+            img_meta = self.metadata[metadata_idx]
             boost_factor = 0.0
             caption_lower = img_meta['caption'].lower()
             keywords_lower = [k.lower() for k in img_meta['keywords']]
@@ -151,10 +162,15 @@ class EmergencyImageRetriever:
                 if any(k in keywords_lower for k in ['pregnant', 'enceinte', 'grossesse']):
                     boost_factor += 0.6
             
-            # Special boost for CPR queries (FR + EN)
-            if any(term in query_lower for term in ['cpr', 'rcp', 'cardiac arrest', 'arrêt cardiaque', 'not breathing', 'ne respire pas', 'heart stopped', 'massage cardiaque']):
+            # Special boost for CPR queries (FR + EN) - ONLY if explicitly about CPR/not breathing
+            cpr_terms = ['cpr', 'rcp', 'cardiac arrest', 'arrêt cardiaque', 'not breathing', 'ne respire pas', 'ne respire plus', 'heart stopped', 'massage cardiaque', 'compressions', 'réanimation', 'resuscitation']
+            if any(term in query_lower for term in cpr_terms):
                 if img_meta['category'].lower() in ['cpr', 'rcp']:
-                    boost_factor += 0.3  # Strong boost for CPR category
+                    boost_factor += 0.5  # Strong boost for CPR category
+            else:
+                # If query is NOT about CPR, penalize CPR images
+                if img_meta['category'].lower() in ['cpr', 'rcp']:
+                    boost_factor -= 0.3
             
             # Special boost for choking queries (FR + EN)
             if any(term in query_lower for term in ['choking', 'étouffement', 'étouffe', "s'étouffe", 'heimlich']):
@@ -165,6 +181,22 @@ class EmergencyImageRetriever:
             if any(term in query_lower for term in ['pls', 'position latérale', 'recovery position', 'inconscient respire', 'unconscious breathing']):
                 if 'pls' in img_meta['category'].lower() or 'recovery' in img_meta['category'].lower() or 'latérale' in img_meta['category'].lower():
                     boost_factor += 0.3
+            
+            # Special boost for unconscious person queries (FR + EN) - should return assessment/primary survey image
+            # ONLY when they don't mention breathing status or CPR
+            unconscious_terms = ['unconscious', 'inconscient', 'inconscience', 'évanoui', 'ne répond pas', 'not responding', 'unresponsive']
+            cpr_breathing_terms = ['not breathing', 'ne respire pas', 'ne respire plus', 'cpr', 'rcp', 'massage cardiaque', 'cardiac arrest', 'arrêt cardiaque']
+            
+            if any(term in query_lower for term in unconscious_terms):
+                # If query is ONLY about unconsciousness (no CPR/breathing mentioned)
+                if not any(term in query_lower for term in cpr_breathing_terms):
+                    if any(k in keywords_lower for k in ['unconscious', 'inconscient', 'primary survey', 'bilan primaire', 'assessment', 'airway', 'voies aériennes']):
+                        boost_factor += 0.8  # Very strong boost for assessment image
+                    if 'évaluation' in img_meta['category'].lower() or 'assessment' in img_meta['category'].lower():
+                        boost_factor += 0.5
+                    # Also check if filename contains "unconsciousness"
+                    if 'unconsciousness' in img_meta['filename'].lower():
+                        boost_factor += 0.6
             
             # Check for exact keyword matches
             for keyword in keywords_to_boost:
@@ -177,21 +209,22 @@ class EmergencyImageRetriever:
             if subcategory_lower in query_lower:
                 boost_factor += 0.2
                 
-            boosted_similarities[idx] += boost_factor
+            boosted_similarities[emb_idx] += boost_factor
         
-        # Get top-k indices
-        top_indices = np.argsort(boosted_similarities)[::-1][:top_k]
+        # Get top-k indices (these are embedding indices, need to map back to metadata)
+        top_emb_indices = np.argsort(boosted_similarities)[::-1][:top_k]
         
-        # Prepare results
+        # Prepare results - map embedding indices back to metadata indices
         results = []
-        for idx in top_indices:
+        for emb_idx in top_emb_indices:
+            metadata_idx = self.valid_indices[emb_idx]
             results.append({
-                'filename': self.metadata[idx]['filename'],
-                'category': self.metadata[idx]['category'],
-                'subcategory': self.metadata[idx]['subcategory'],
-                'caption': self.metadata[idx]['caption'],
-                'keywords': self.metadata[idx]['keywords'],
-                'similarity': float(boosted_similarities[idx])
+                'filename': self.metadata[metadata_idx]['filename'],
+                'category': self.metadata[metadata_idx]['category'],
+                'subcategory': self.metadata[metadata_idx]['subcategory'],
+                'caption': self.metadata[metadata_idx]['caption'],
+                'keywords': self.metadata[metadata_idx]['keywords'],
+                'similarity': float(boosted_similarities[emb_idx])
             })
         
         return results
