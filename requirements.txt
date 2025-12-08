@@ -23,3 +23,5 @@ pyrefly
 clip
 openai-clip
 python-dotenv
+websockets
+pyaudio

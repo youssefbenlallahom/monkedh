@@ -29,6 +29,7 @@ dependencies = [
     "pyrefly>=0.43.1",
     "clip>=0.2.0",
     "openai-clip>=1.0.1",
+    "azure-cognitiveservices-speech>=1.35.0",
 ]
 
 [project.scripts]
@@ -37,6 +38,9 @@ run_crew = "monkedh.main:run"
 train = "monkedh.main:train"
 replay = "monkedh.main:replay"
 test = "monkedh.main:test"
+voice = "monkedh.main:run_voice_entry"
+voice_old = "monkedh.main_voice:run_voice"
+voice_tts = "monkedh.main_voice:run_tts_only"
 
 [build-system]
 requires = ["hatchling"]
