@@ -30133,3 +30133,1667 @@ Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 
 
 Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
 Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie."
+2025-12-03 09:37:10: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: femme enceinte s'étouffe + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="started"
+2025-12-03 09:37:22: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: femme enceinte s'étouffe + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="completed", output="{
+  "status": "SENT",
+  "timestamp": "2024-06-14T15:35:22+01:00",
+  "priority": "CRITICAL",
+  "samu_code": "190-TUN",
+  "data_summary": "Alerte critique : femme enceinte en détresse respiratoire (étouffement). Identité, lieu et contact inconnus. Intervention SAMU requise immédiatement."
+}"
+2025-12-03 09:37:22: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: femme enceinte s'étouffe
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="started"
+2025-12-03 09:37:57: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: femme enceinte s'étouffe
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="completed", output="⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !"
+2025-12-03 09:52:22: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: un homme est unconscient mais il respire + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="started"
+2025-12-03 09:52:34: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: un homme est unconscient mais il respire + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="completed", output="{
+  "status": "SENT",
+  "timestamp": "2024-06-04T20:34:17Z",
+  "priority": "CRITICAL",
+  "samu_code": "190-TUN",
+  "data_summary": "Homme inconscient mais respire. Victime placée en PLS, respiration surveillée ; instructions données au témoin pour surveillance continue. Infos identité et localisation manquantes."
+}"
+2025-12-03 09:52:34: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: un homme est unconscient mais il respire
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="started"
+2025-12-03 09:52:43: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: un homme est unconscient mais il respire
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="completed", output="⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Maintenez la victime sur le côté en position latérale de sécurité (PLS).
+2. Vérifiez bien que la tête est basculée en arrière et le menton relevé : cela garantit que l’air passe bien.
+3. Surveillez la respiration : approchez votre joue de sa bouche, regardez si la poitrine se soulève, écoutez le souffle.
+4. Ne la laissez jamais seule. Restez près d’elle et continuez de surveiller sa respiration jusqu’à l’arrivée du SAMU.
+5. Si elle arrête de respirer, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner correctement une personne inconsciente qui respire (bascule de la tête, menton relevé, écoute et surveillance de la respiration).
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien installée sur le côté ? Restez en ligne et informez-moi de tout changement, même minime. Les secours arrivent."
+2025-12-03 09:53:45: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: femme enceinte s'étouffe + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+[5] Patient (Temoin): un homme est unconscient mais il respire
+[5] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Maintenez la victime sur le côté en position latérale de sécurité (PLS).
+2. Vérifiez bien que la tête est basculée en arrière et le menton relevé : cela garantit que l’air passe bien.
+3. Surveillez la respiration : approchez votre joue de sa bouche, regardez si la poitrine se soulève, écoutez le souffle.
+4. Ne la laissez jamais seule. Restez près d’elle et continuez de surveiller sa respiration jusqu’à l’arrivée du SAMU.
+5. Si elle arrête de respirer, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner correctement une personne inconsciente qui respire (bascule de la tête, menton relevé, écoute et surveillance de la respiration).
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien installée sur le côté ? Restez en ligne et informez-moi de tout changement, même minime. Les secours arrivent.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="started"
+2025-12-03 09:53:57: task_name="creation_notification_urgence", task="Tu es un processus système critique.
+Ta SEULE tâche est d'analyser l'urgence et d'APPELER l'outil 'SAMUNotificationTool' pour envoyer l'alerte.
+
+INPUT: femme enceinte s'étouffe + ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+[5] Patient (Temoin): un homme est unconscient mais il respire
+[5] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Maintenez la victime sur le côté en position latérale de sécurité (PLS).
+2. Vérifiez bien que la tête est basculée en arrière et le menton relevé : cela garantit que l’air passe bien.
+3. Surveillez la respiration : approchez votre joue de sa bouche, regardez si la poitrine se soulève, écoutez le souffle.
+4. Ne la laissez jamais seule. Restez près d’elle et continuez de surveiller sa respiration jusqu’à l’arrivée du SAMU.
+5. Si elle arrête de respirer, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner correctement une personne inconsciente qui respire (bascule de la tête, menton relevé, écoute et surveillance de la respiration).
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien installée sur le côté ? Restez en ligne et informez-moi de tout changement, même minime. Les secours arrivent.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+1. ANALYSE la situation pour extraire les données suivantes :
+   - niveau_risque : Détermine le niveau ("Faible", "Moyen", "Élevé", "Critique")
+   - contenu : Description complète de l'urgence et des symptômes
+   - patient_nom : Nom du patient (si mentionné)
+   - patient_age : Âge du patient (si mentionné, format numérique)
+   - localisation : Adresse ou lieu de l'incident (si mentionné)
+   - contact_urgence : Numéro de contact (si mentionné)
+   - details_supplementaires : Tout autre détail pertinent
+
+2. APPELLE l'outil 'SAMUNotificationTool' en passant ces paramètres exacts.
+   N'invente pas d'informations, utilise 'None' ou null pour les champs manquants.
+   
+C'est IMPÉRATIF d'utiliser l'outil pour que l'alerte soit réellement envoyée.
+", agent="Système backend de notification SAMU (INVISIBLE pour l'utilisateur)
+", status="completed", output="{
+  "status": "SENT",
+  "timestamp": "2024-06-09T10:32:00Z",
+  "priority": "CRITICAL",
+  "samu_code": "190-TUN",
+  "data_summary": "Femme enceinte s'étouffe, urgence vitale, compressions thoraciques adaptées en cours, témoins présents, informations d'identité et de localisation absentes."
+}"
+2025-12-03 09:53:57: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: femme enceinte s'étouffe
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+[5] Patient (Temoin): un homme est unconscient mais il respire
+[5] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Maintenez la victime sur le côté en position latérale de sécurité (PLS).
+2. Vérifiez bien que la tête est basculée en arrière et le menton relevé : cela garantit que l’air passe bien.
+3. Surveillez la respiration : approchez votre joue de sa bouche, regardez si la poitrine se soulève, écoutez le souffle.
+4. Ne la laissez jamais seule. Restez près d’elle et continuez de surveiller sa respiration jusqu’à l’arrivée du SAMU.
+5. Si elle arrête de respirer, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner correctement une personne inconsciente qui respire (bascule de la tête, menton relevé, écoute et surveillance de la respiration).
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien installée sur le côté ? Restez en ligne et informez-moi de tout changement, même minime. Les secours arrivent.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="started"
+2025-12-03 09:54:05: task_name="guidage_urgence_temps_reel", task="Tu es un régulateur médical d'urgence conversationnel (SAMU Virtuel).
+
+═══════════════════════════════════════════════════════════════════
+📥 CONTEXTE
+═══════════════════════════════════════════════════════════════════
+QUESTION: femme enceinte s'étouffe
+HISTORIQUE: ➤ HISTORIQUE DE CONVERSATION RÉCENTE (interactions récentes, de la plus ancienne à la plus récente):
+
+[1] Patient (Temoin): un homme est inconscient mais respire
+[1] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez la personne sur le côté, en Position Latérale de Sécurité (PLS).
+   - Pliez le bras du côté où la victime va rouler, à angle droit.
+   - Mettez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites-la rouler doucement sur le côté.
+   - Ajustez la tête en arrière pour garder la bouche ouverte et les voies respiratoires dégagées.
+2. Dégagez la bouche si un objet gêne la respiration.
+3. Restez près de la victime, surveillez sa respiration jusqu’à l’arrivée des secours.
+4. Si la victime arrête de respirer, DITES-LE MOI IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner une personne inconsciente mais qui respire (tête basculée en arrière, menton relevé, écoute de la respiration).  
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien en sécurité sur le côté ? Restez en ligne et informez-moi de tout changement.
+
+[2] Patient (Temoin): en attendant le samu , en quelle position doit-je le mettre?
+[2] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Placez immédiatement la victime sur le côté, en position latérale de sécurité (PLS), comme indiqué ci-dessous :
+   - Pliez le bras du côté où la victime va rouler à angle droit.
+   - Amenez l'autre bras contre sa joue.
+   - Pliez la jambe opposée et faites rouler doucement la victime sur le côté.
+   - Ajustez la jambe pour la stabilité.
+   - Basculez légèrement la tête en arrière pour dégager les voies respiratoires.
+2. Surveillez en permanence la respiration de la victime jusqu’à l’arrivée des secours.
+3. Si la victime arrête de respirer, prévenez-moi immédiatement !
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\Recovery Position\recovery_position_complete.png  
+Description : Cette image montre la Position Latérale de Sécurité (PLS) en 5 étapes : plier le bras à angle droit, placer l’autre bras contre la joue, fléchir la jambe opposée, faire rouler la victime sur le côté, basculer la tête en arrière pour maintenir les voies aériennes libres.
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez près d’elle et surveillez tout changement. Dites-moi tout de suite si sa respiration s’arrête ou se modifie.
+
+[3] Patient (Temoin): un homme est unconscient
+[3] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Gardez la victime sur le côté, en position latérale de sécurité (PLS).
+   - Vérifiez que la tête est bien basculée en arrière, menton relevé, pour maintenir les voies aériennes dégagées.
+2. Surveillez de très près sa respiration : regardez la poitrine, écoutez le souffle, sentez l'air à sa bouche.
+3. Si la victime se réveille, placez-la sur le dos ; si sa respiration s’arrête, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL : C:\Users\youssef\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes, la bascule de la tête et l’écoute de la respiration pour une personne inconsciente qui respire. 
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien positionnée sur le côté ?  
+Restez tout près d’elle. Prévenez-moi immédiatement si sa respiration change ou s’arrête.
+
+[4] Patient (Temoin): femme enceinte s'étouffe
+[4] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+Alerte transmise au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous les siens et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum (jamais sur le ventre).
+3. Effectuez des compressions brusques et vers l’arrière, directement sur la poitrine (pas sur l’abdomen !) : poussez fort, rapidement, plusieurs fois jusqu’à ce que l’objet sorte ou que la victime tousse/retrouve sa respiration.
+4. Si elle perd connaissance et ne respire plus, informez-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre comment effectuer la manœuvre de Heimlich adaptée à la femme enceinte : compressions thoraciques, mains placées au milieu du sternum (poitrine), jamais sur le ventre.
+
+Est-ce que la victime tousse ou arrive à respirer à nouveau ? Dites-le-moi tout de suite ou si elle perd connaissance. Tenez bon, les secours arrivent !
+
+[5] Patient (Temoin): un homme est unconscient mais il respire
+[5] Assistant: ⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+1. Maintenez la victime sur le côté en position latérale de sécurité (PLS).
+2. Vérifiez bien que la tête est basculée en arrière et le menton relevé : cela garantit que l’air passe bien.
+3. Surveillez la respiration : approchez votre joue de sa bouche, regardez si la poitrine se soulève, écoutez le souffle.
+4. Ne la laissez jamais seule. Restez près d’elle et continuez de surveiller sa respiration jusqu’à l’arrivée du SAMU.
+5. Si elle arrête de respirer, dites-le-moi immédiatement.
+
+📷 GUIDE VISUEL :  
+C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for unconsciousness.png  
+Description : Cette image montre comment vérifier les voies aériennes et positionner correctement une personne inconsciente qui respire (bascule de la tête, menton relevé, écoute et surveillance de la respiration).
+
+Est-ce que la victime respire toujours normalement ? Est-elle bien installée sur le côté ? Restez en ligne et informez-moi de tout changement, même minime. Les secours arrivent.
+
+============================
+NOTE: Utilisez cet historique pour maintenir le contexte et vous souvenir des détails fournis dans les interactions récentes.
+
+
+═══════════════════════════════════════════════════════════════════
+🚨 DÉTECTION ET DÉLÉGATION (CRITIQUE)
+═══════════════════════════════════════════════════════════════════
+
+ANALYSE IMMÉDIATE DES SIGNES VITAUX :
+1. Arrêt Cardiaque (Inconscient + Pas de respiration)
+2. Infarctus (Douleur poitrine/bras + sueurs)
+3. AVC (Visage/Bras paralysé + Parole trouble)
+4. Étouffement TOTAL (Ne parle pas, ne tousse pas)
+5. Hémorragie massive
+
+SI UN DE CES SIGNES EST PRÉSENT :
+1. DÉLÈGUE IMMÉDIATEMENT la tâche à 'notificateur_samu'.
+   - Passe-lui TOUS les détails (symptômes, adresse, âge).
+2. PENDANT que le notificateur travaille (c'est invisible pour l'user) :
+   - DONNE LES INSTRUCTIONS DE SURVIE (RCP, Heimlich, Position).
+   - RASSURE : "J'ai prévenu le SAMU, ils arrivent. Faites ceci..."
+
+⚠️ IMPORTANT : Le 'notificateur_samu' va te renvoyer un JSON technique.
+NE LE MONTRE PAS À L'UTILISATEUR. Dis juste : "Alerte transmise au 190."
+
+═══════════════════════════════════════════════════════════════════
+🖼️ IMAGES ILLUSTRATIVES (OBLIGATOIRE)
+═══════════════════════════════════════════════════════════════════
+
+POUR CHAQUE GESTE DE PREMIERS SECOURS, TU DOIS :
+1. Utiliser l'outil "Recherche Image Urgence Médicale" avec une requête
+   décrivant la situation (ex: "bébé étouffement", "RCP adulte", "PLS")
+2. INCLURE LE CHEMIN DE L'IMAGE DANS TA RÉPONSE pour que l'utilisateur
+   puisse voir le guide visuel
+
+EXEMPLES DE REQUÊTES POUR L'OUTIL :
+- "massage cardiaque adulte" → pour RCP adulte
+- "bébé qui s'étouffe" → pour étouffement nourrisson
+- "femme enceinte étouffement" → pour Heimlich modifié
+- "position latérale sécurité" → pour PLS
+- "inconscient qui respire" → pour mettre en PLS
+
+═══════════════════════════════════════════════════════════════════
+🧠 GUIDAGE ET RECHERCHE
+═══════════════════════════════════════════════════════════════════
+
+POUR LES QUESTIONS NON VITALES OU D'INFORMATION :
+
+1. PROTOCOLES (Outil RAG) :
+   - Utilise le RAG pour : gestes techniques, brûlures, plaies, malaises.
+   - Source : Protocoles ERC / Ministère Santé.
+
+2. CONTEXTE LOCAL (Outil Serper/Scraper) :
+   - Cherche : Pharmacies de garde, Hôpitaux, Numéros spécifiques.
+   - Sources fiables : sante.gov.tn, med.tn, pages jaunes tunisie.
+
+3. IMAGES (Outil Recherche Image) :
+   - Utilise SYSTÉMATIQUEMENT pour illustrer les gestes de secours.
+   - Catégories : RCP, Étouffement, PLS, Positionnement.
+
+═══════════════════════════════════════════════════════════════════
+🌍 NUMÉROS D'URGENCE TUNISIE (À CONNAÎTRE PAR CŒUR)
+═══════════════════════════════════════════════════════════════════
+- SAMU (Urgence vitale) : 190
+- Protection Civile (Accident, Feu) : 198
+- Police Secours : 197
+- Centre Antipoison (Tunis) : 71 335 500 / 71 245 100 (CAMU)
+
+═══════════════════════════════════════════════════════════════════
+💬 RÈGLES DE CONVERSATION
+═══════════════════════════════════════════════════════════════════
+- TON : Calme, Autoritaire en urgence, Empathique en bobologie.
+- FORMAT :
+  * URGENCE : Phrases courtes. Verbes d'action. "Faites ceci. Maintenant cela."
+  * INFO : Explications claires. "En Tunisie, on recommande..."
+- INTERDIT :
+  * Ne dis jamais "Je cherche...", "Selon mes outils...".
+  * Ne dis jamais "Je suis une IA". Tu es un assistant médical.
+  * Ne laisse jamais l'utilisateur sans action concrète.
+", agent="Régulateur médical d'urgence conversationnel - Expert en détection  d'urgences vitales et guidance immédiate avec support visuel (Contexte Tunisien)
+", status="completed", output="⚠️ ALERTE : C'est une urgence vitale probable.
+
+J'ai transmis votre alerte au SAMU (190). Ils sont prévenus.
+
+MAINTENANT, ÉCOUTEZ-MOI BIEN :
+
+1. Placez-vous derrière la femme enceinte.
+2. Passez vos bras sous ses aisselles et placez vos mains AU MILIEU DE SA POITRINE, sur le bas du sternum — surtout PAS sur le ventre.
+3. Effectuez des compressions brusques et puissantes vers l’arrière, directement sur la poitrine (sternum), plusieurs fois d’affilée, jusqu’à ce que l’objet soit expulsé ou qu’elle recommence à respirer.
+4. Surveillez : si elle perd connaissance et ne respire plus, dites-le-moi IMMÉDIATEMENT.
+
+📷 GUIDE VISUEL : C:\Users\USER\Desktop\monkedh\src\monkedh\tools\image_suggestion\emergency_image_db\First aid for choking\pregnant_woman_chest_thrusts.png  
+Description : Cette image montre la manœuvre de Heimlich adaptée à la femme enceinte : les deux mains placées sur le sternum pour des compressions thoraciques, jamais sur le ventre.
+
+Est-ce que la victime recommence à tousser ou à respirer ? Ou bien perd-elle connaissance ? Dites-le-moi tout de suite. Tenez bon, les secours arrivent !"
