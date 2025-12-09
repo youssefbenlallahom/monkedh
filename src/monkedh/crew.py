@@ -10,7 +10,6 @@ from crewai.memory.short_term.short_term_memory import ShortTermMemory
 import dotenv
 from monkedh.tools.rag import create_first_aid_search_tool
 from monkedh.tools.rag.config import QDRANT_URL, QDRANT_API_KEY
-from .tools.samu_notification_tool import SAMUNotificationTool
 from .tools.image_suggestion import search_emergency_image
 
 
@@ -69,46 +68,41 @@ class Monkedh():
     image_tool = search_emergency_image
     
     # ============================================
-    # AGENT 1 : COLLECTEUR DE DONNÉES MÉDICALES
+    # AGENT UNIQUE : ASSISTANT MÉDICAL COMPLET
     # ============================================
     @agent
-    def guideur_urgence_samu(self) -> Agent:
+    def assistant_urgence_medical(self) -> Agent:
+        """
+        Agent unique qui gère tout : détection d'urgence, guidage 
+        et images illustratives.
+        Réduit la latence en éliminant la délégation inter-agents.
+        """
         return Agent(
-            config=self.agents_config['guideur_urgence_samu'],
-            tools=[self.rag_tool, self.serper_tool, self.webscraper_tool, self.image_tool],
+            config=self.agents_config['assistant_urgence_medical'],
+            tools=[
+                self.image_tool,         # Images premiers secours (PRIORITAIRE)
+                self.rag_tool,           # Protocoles médicaux
+                self.serper_tool,        # Recherche web (pharmacies, hôpitaux)
+                self.webscraper_tool,    # Scraping de pages
+            ],
             llm=llm,
             max_iter=3,
-            cache=False,
-            verbose=False,
-        )
-    @agent
-    def notificateur_samu(self) -> Agent:
-        return Agent(
-            config=self.agents_config['notificateur_samu'],
-            tools=[SAMUNotificationTool()],
-            llm=llm,
-            max_iter=1,
-            cache=False,
+            cache=False,  # Désactivé pour forcer l'appel des outils
             verbose=True,
         )
-    
 
     # ============================================
-    # TÂCHES DE L'AGENT COLLECTEUR
+    # TÂCHE UNIQUE : ASSISTANCE MÉDICALE COMPLÈTE
     # ============================================
     @task
-    def creation_notification_urgence(self) -> Task:
+    def assistance_medicale_complete(self) -> Task:
+        """
+        Tâche unique qui combine détection, guidage et notification.
+        """
         return Task(
-            config=self.tasks_config['creation_notification_urgence'],
-            output_file='notification.json'
-        )
-    @task
-    def guidage_urgence_temps_reel(self) -> Task:
-        return Task(
-            config=self.tasks_config['guidage_urgence_temps_reel'],
+            config=self.tasks_config['assistance_medicale_complete'],
             output_file='protocols_urgences.json'
         )
-   
 
     @crew
     def crew(self) -> Crew:
@@ -123,12 +117,12 @@ class Monkedh():
         
         short_term_memory = ShortTermMemory(storage=redis_storage)
         return Crew(
-            agents=self.agents, # Automatically created by the @agent decorator
-            tasks=self.tasks, # Automatically created by the @task decorator
+            agents=self.agents,
+            tasks=self.tasks,
             process=Process.sequential,
             short_term_memory=short_term_memory,
             function_calling_llm=llm,
             verbose=True,
             output_log_file="monkedh_crew.log",
-            cache=False,
+            cache=True,
         )
