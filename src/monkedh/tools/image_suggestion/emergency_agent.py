@@ -32,21 +32,58 @@ def search_emergency_image(query: str) -> str:
     Returns:
         Information about the best matching image including filename, category, 
         description, and relevance score.
+        
+    IMPORTANT: When using this image in your response, you MUST:
+    1. Include the EXACT image path
+    2. DESCRIBE what the image shows using the "Description" field
+    3. Only use the image if it matches the situation (relevance > 50%)
     """
     retriever = get_retriever()
     results = retriever.retrieve(query, top_k=1)
     
     if results:
         best_match = results[0]
-        return f"""
-BEST MATCH FOUND:
-- Image: {best_match['filename']}
-- Category: {best_match['category']} ({best_match['subcategory']})
-- Description: {best_match['caption']}
-- Keywords: {', '.join(best_match['keywords'])}
-- Relevance Score: {best_match['similarity']:.2%}
+        relevance_pct = best_match['similarity'] * 100
+        
+        # Warn if relevance is low
+        relevance_warning = ""
+        if relevance_pct < 50:
+            relevance_warning = """
+⚠️ LOW RELEVANCE WARNING: This image may not match the situation well.
+   Consider NOT including this image in your response, or search with different keywords.
 """
-    return "No matching image found in the database."
+        
+        return f"""
+═══════════════════════════════════════════════════════════════════
+📷 IMAGE TROUVÉE
+═══════════════════════════════════════════════════════════════════
+{relevance_warning}
+📁 CHEMIN IMAGE (à copier tel quel) :
+{best_match['filename']}
+
+📂 CATÉGORIE : {best_match['category']} - {best_match['subcategory']}
+
+📝 CE QUE MONTRE L'IMAGE (à décrire dans ta réponse) :
+{best_match['caption']}
+
+🏷️ MOTS-CLÉS : {', '.join(best_match['keywords'][:8])}
+
+📊 PERTINENCE : {relevance_pct:.0f}%
+
+═══════════════════════════════════════════════════════════════════
+⚠️ INSTRUCTIONS OBLIGATOIRES :
+═══════════════════════════════════════════════════════════════════
+Quand tu utilises cette image dans ta réponse :
+1. COPIE le chemin EXACT ci-dessus
+2. DÉCRIS ce que montre l'image en utilisant la description ci-dessus
+3. Si pertinence < 50%, NE PAS utiliser l'image
+
+EXEMPLE DE FORMAT À UTILISER :
+📷 GUIDE VISUEL : [chemin image]
+   Cette image montre : [description de ce que montre l'image]
+═══════════════════════════════════════════════════════════════════
+"""
+    return "❌ Aucune image correspondante trouvée. Ne mentionne pas d'image dans ta réponse."
 
 
 @tool("Browse Emergency Categories")
