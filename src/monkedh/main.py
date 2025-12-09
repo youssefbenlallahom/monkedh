@@ -77,7 +77,7 @@ def run_text_mode():
         print(f"\n{output}\n")
 
 
-def run_voice_mode():
+def run_voice_mode(voice_type: str = "shimmer"):
     """Run the chatbot in voice mode using GPT-Realtime."""
     import time
     import re
@@ -96,9 +96,9 @@ def run_voice_mode():
         print("   Installez: pip install pyaudio websockets")
         return
     
-    # Initialize voice
+    # Initialize voice with selected voice type
     try:
-        voice = GPTRealtimeVoice()
+        voice = GPTRealtimeVoice(voice=voice_type)
     except Exception as e:
         print(f"❌ Erreur initialisation voice: {e}")
         return
@@ -194,12 +194,15 @@ def run():
     parser = argparse.ArgumentParser(description="Assistant d'urgence médical CrewAI")
     parser.add_argument('--voice', '-v', action='store_true', 
                         help='Activer le mode vocal (GPT-Realtime)')
+    parser.add_argument('--voice-type', '-vt', type=str, default='nova',
+                        choices=['shimmer', 'nova', 'alloy', 'echo', 'fable', 'onyx'],
+                        help='Choisir la voix: shimmer (femme), nova (femme pro), alloy (neutre), echo (homme), fable (homme UK), onyx (homme grave)')
     
     # Parse only known args to avoid conflicts with other entry points
     args, _ = parser.parse_known_args()
     
     if args.voice:
-        run_voice_mode()
+        run_voice_mode(voice_type=args.voice_type)
     else:
         run_text_mode()
 

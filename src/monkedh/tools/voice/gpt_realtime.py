@@ -36,10 +36,39 @@ class GPTRealtimeVoice:
     """
     Full-duplex voice handler using Azure GPT-Realtime API.
     Single WebSocket for both speech recognition and audio synthesis.
+    
+    Available voices:
+    - "alloy"   : Neutral, balanced (default)
+    - "shimmer" : Female, warm and friendly ⭐
+    - "nova"    : Female, professional ⭐
+    - "echo"    : Male, clear
+    - "fable"   : Male, British accent
+    - "onyx"    : Male, deep and authoritative
     """
     
-    def __init__(self):
-        """Initialize GPT-Realtime voice handler."""
+    # Voice options
+    VOICES = {
+        "alloy": "Neutral, balanced",
+        "shimmer": "Female, warm and friendly ⭐",
+        "nova": "Female, professional ⭐", 
+        "echo": "Male, clear",
+        "fable": "Male, British accent",
+        "onyx": "Male, deep and authoritative"
+    }
+    
+    def __init__(self, voice: str = "nova"):
+        """
+        Initialize GPT-Realtime voice handler.
+        
+        Args:
+            voice: Voice to use for TTS. Options:
+                   - "nova" (female, professional) ⭐ DEFAULT - Best for emergencies
+                   - "shimmer" (female, warm)
+                   - "alloy" (neutral)
+                   - "echo" (male, clear)
+                   - "fable" (male, British)
+                   - "onyx" (male, deep)
+        """
         self.api_key = os.getenv("AZURE_REALTIME_API_KEY")
         self.api_base = os.getenv("AZURE_REALTIME_API_BASE")
         
@@ -48,6 +77,9 @@ class GPTRealtimeVoice:
                 "Missing Azure GPT-Realtime credentials. "
                 "Set AZURE_REALTIME_API_KEY and AZURE_REALTIME_API_BASE in .env"
             )
+        
+        # Voice selection
+        self.voice = voice.lower() if voice.lower() in self.VOICES else "nova"
         
         # WebSocket URL
         self.ws_url = self.api_base.replace("https://", "wss://").replace("http://", "ws://")
@@ -64,7 +96,7 @@ class GPTRealtimeVoice:
         self.audio_queue = queue.Queue()
         self.transcript_queue = queue.Queue()
         
-        print("✅ GPT-Realtime Voice initialisé")
+        print(f"✅ GPT-Realtime Voice initialisé (voix: {self.voice} - {self.VOICES[self.voice]})")
     
     def is_available(self) -> bool:
         """Check if all dependencies are available."""
@@ -91,7 +123,7 @@ class GPTRealtimeVoice:
                 Réponds de manière claire, calme et concise en français.
                 Pose des questions pour évaluer la situation.
                 Donne des instructions de premiers secours si nécessaire.""",
-                "voice": "alloy",
+                "voice": self.voice,
                 "input_audio_format": "pcm16",
                 "output_audio_format": "pcm16",
                 "input_audio_transcription": {
