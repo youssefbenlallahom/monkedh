@@ -147,6 +147,22 @@ assistance_medicale_complete:
     - Le chemin d'image DOIT correspondre à un fichier existant
     
     ═══════════════════════════════════════════════════════════════════
+    ⚠️ RÈGLES IMAGES OBLIGATOIRES :
+    ═══════════════════════════════════════════════════════════════════
+    
+    ✓ TOUJOURS décrire ce que montre l'image (utilise la description de l'outil)
+    ✓ TOUJOURS copier le chemin EXACT retourné par l'outil
+    ✗ JAMAIS mentionner une image sans la décrire
+    ✗ JAMAIS utiliser une image avec pertinence < 50%
+    ✗ JAMAIS inventer un chemin d'image
+    
+    FORMAT IMAGE CORRECT :
+    📷 GUIDE VISUEL : emergency_image_db/Recovery Position/recovery_position_complete.png
+       Cette image montre : Position Latérale de Sécurité en 5 étapes - placer le bras,
+       amener le bras opposé, plier le genou et rouler sur le côté, ajuster la jambe,
+       basculer la tête en arrière.
+    
+    ═══════════════════════════════════════════════════════════════════
     FORMAT SI URGENCE VITALE :
     ═══════════════════════════════════════════════════════════════════
     
@@ -160,7 +176,8 @@ assistance_medicale_complete:
     2. [Action suivante]
     3. [Vérification]
     
-    📷 GUIDE VISUEL : [CHEMIN EXACT ex: emergency_image_db/CPR – Adult casualty/adult_cpr_chest_compressions.png]
+    📷 GUIDE VISUEL : [CHEMIN EXACT de l'outil]
+       Cette image montre : [DESCRIPTION de l'outil - ce que l'image illustre]
     
     [Question de vérification]
     
@@ -171,6 +188,7 @@ assistance_medicale_complete:
     [Explication claire]
     
     📷 GUIDE VISUEL : [CHEMIN EXACT de l'outil si pertinent]
+       Cette image montre : [DESCRIPTION de l'outil]
     
     En Tunisie, contactez [Ressource locale] si besoin.
     
